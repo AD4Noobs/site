@@ -121,7 +121,7 @@ You should **not** use a weak password like this in a production environment. Fo
 Now confirm the password.
 
 {{% notice warning %}}
-Again, please don't use these weak password in production. Sadly I still find passwords like these on almost all my internal assessments.
+Again, please don't use these weak passwords like this in production. Sadly I still find passwords like these on almost all my internal assessments.
 {{% /notice %}}
 
 ![](new_vm_24.png)
