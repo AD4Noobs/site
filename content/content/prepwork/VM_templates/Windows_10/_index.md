@@ -148,38 +148,89 @@ Now simply do as Microsoft says and let them handle things. Just sit back and re
 
 ![](new_vm_30.png)
 
+## Windows updates
+
+Once Windows has been fully setup we can start updating it to the latest version. Click on start and go to `Settings`.
+
 ![](new_vm_31.png)
+
+Search for updates.
 
 ![](new_vm_32.png)
 
-![](new_vm_33.png)
+And click on `Check for updates`.
 
 ![](new_vm_34.png)
 
+During this process you will need to reboot multiple times and keep checking for new updates.   
+You know when you are done updating when the 'Check for updates' button returns 'You're up to date' and returns no further updates.
+
+![](updates_done.png)
+
+## Windows time
+
+Since a Active Directory is sensitive to time (de)synchronization issues between Clients and Active Directory it is imported we the time up correctly in our templates.
+
+To open the time settings right click on the date/time on the startbar en select `Adjust date/time`.
+
 ![](new_vm_35.png)
 
-If the time is incorrect after changing the time zone, turn of and on 'set time automatically'.
+If the time is incorrect after changing the time zone, turn off and on `Set time automatically`.
 
 ![](new_vm_36.png)
 
-Once you are done updating your VM go to "Devices -> 'Insert guest additions CD image'" in virtualbox
+## Guest additions
+
+One of the last things we need todo in our template is install VirutalBox guest additions.
+
+Once you are done updating your VM go to `Devices -> Insert guest additions CD image` in Virtualbox. If this is the first time doing this you will be prompted to download them. Click on Download.
 
 ![](new_vm_37.png)
 
+Click on Download.
+
 ![](new_vm_38.png)
+
+After it finishes downloading click on Insert.
 
 ![](new_vm_39.png)
 
+Now open the explorer and browse to `This PC`, then click on the `CD Drive`.
+
 ![](new_vm_40.png)
+
+Then run `VBoxWindowsAdditions-amd64`.
 
 ![](new_vm_41.png)
 
+Click on Yes.
+
 ![](new_vm_42.png)
 
-keep clicking next untill the installation ask you to install a device.
+Then keep clicking next until the installation prompts you to install device software.
 
 ![](new_vm_43.png)
 
-click install
+When it asks you install device software to click Install
 
 ![](new_vm_44.png)
+
+Now the Guest additions installation should finish up. Once its done check `reboot now` and once its rebooted shutdown the VM.
+
+![](new_vm_45.png)
+
+## Create Snapshot
+
+Since we now have a VM in a nice clean and prepared state we want to create a snapshot of it. A snapshot is basically a copy of your VM at a given point in time. This snapshot will allow us to create `Linked clone` which will save us time and disk space.
+
+Back in Virutalbox click on the 3 squares and lines next to the VM. Then choose `Snapshots` and click on `Take`.
+
+![](new_vm_46.png)
+
+Now enter a name for the snapshot. In the case of Templates I like to note down what kind it is (in this case a clean VM) and when it was last updated.
+
+![](new_vm_47.png)
+
+## Finished!
+
+Now we are done with the preparation of the Windows 10 Template. Let's continue with the Server 2019 Template.
