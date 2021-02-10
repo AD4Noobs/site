@@ -169,13 +169,15 @@ You know when you are done updating when the 'Check for updates' button returns 
 
 ## Windows time
 
-Since a Active Directory is sensitive to time (de)synchronization issues between Clients and Active Directory it is imported we the time up correctly in our templates.
+Since a Active Directory is sensitive to time (de)synchronization issues between Clients and Active Directory it is imported we setup system time correctly in our templates.
 
-To open the time settings right click on the date/time on the startbar en select `Adjust date/time`.
+To open the system time settings right click on the date/time on the startbar en select `Adjust date/time`.
 
 ![](new_vm_35.png)
 
-If the time is incorrect after changing the time zone, turn off and on `Set time automatically`.
+Now update the time zone to your local zone. (Mine is UTC+01:00). Just remember to set the same time zone on the next template we create.
+
+If the time is incorrect/not updating after changing the time zone, turn off and on `Set time automatically`. This should fix it.
 
 ![](new_vm_36.png)
 

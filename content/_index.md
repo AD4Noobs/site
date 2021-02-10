@@ -7,7 +7,7 @@ weight: 1
 
 # AD4Noobs
 
-So you want to learn the in and outs of getting started with Active Directory ? Well then you came to the right place ! If you don't care about this preface stuff just click on the arrow on the right. This will take you to the first needed steps to get started.
+So you want to learn the in and outs of getting started with Active Directory ? Well then you came to the right place ! If you don't care about this preface stuff just click on the arrow on the right or use the navigation on the top left if you are on mobile. This will take you to the first needed steps to get started.
 
 {{< figure src="explain_ad.png" title="Its not that complicated, not at all. Trust me!" >}}
 
@@ -16,7 +16,7 @@ So you want to learn the in and outs of getting started with Active Directory ? 
 Over the last couple of years I came into contact with young people who want to enter the InfoSec field, most of which who don't have an background in IT. {{%expand "Whenever I or someone else brought up something about Active Directory almost no one knew what it was or what it was used for. The fact that most of the time a  general explication like 'Active Directory is like a database for users and computers' was given wasn't helping that." %}}
 Probably because I used it a lot in my past jobs and since after I started doing 'the cybers' I like to [tinker](https://sensepost.com/blog/2020/ace-to-rce/) with it. {{% /expand%}}
 
-After starting a job as an Ethical Hacker I came into contact with a lot of internal networks. Pretty much on all these internal assessments Active Directory (and everything that comes with it) was the weakest link or was heavily part of me gaining administrative access in the network. This leads me to believe that there is a general lack of Active Directory knowledge or it's missing from where it matters the most. I think this is perfectly backed up if you look at the current state of malware, and more specific cryptoware/ransomware.
+After starting a job as an Ethical Hacker I came into contact with a lot of internal networks. Pretty much on all these internal assessments Active Directory (and everything that comes with it) was the weakest link or was heavily part of me gaining administrative access in the network. This leads me to believe that there is a general lack of Active Directory knowledge or it's missing from where it matters the most. I think this is perfectly backed up if you look at the current state of malware, and more specifically cryptoware/ransomware.
 
 {{< figure src="ad_ransomware.png?width=25pc"  title="Just google 'ransomware active directory'" >}}
 
