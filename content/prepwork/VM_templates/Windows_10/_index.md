@@ -11,7 +11,7 @@ Click on `New`
 
 ![](new_vm_01.png)
 
-Change the name to `WIndows 10 Template` and the version to `Windows 10 64-bit` and click Next.
+Change the name to `Windows 10 Template` and the version to `Windows 10 64-bit` and click Next.
 
 ![](new_vm_02.png)
 
@@ -127,7 +127,7 @@ Again, please don't use these weak password in production. Sadly I still find pa
 ![](new_vm_24.png)
 
 {{% notice info %}}
-I always add save the login credentials to the descriptions of my **local testing** VMs so I can't forget. I recommend you do this also.
+I always add the login credentials to the descriptions of my **local testing** VMs so I can't forget them. I recommend you do this also.
 {{% /notice %}}
 
 ![](creds_virtualbox.png)
@@ -233,4 +233,4 @@ Now enter a name for the snapshot. In the case of Templates I like to note down 
 
 ## Finished!
 
-Now we are done with the preparation of the Windows 10 Template. Let's continue with the Server 2019 Template.
+Now we are done with the preparation of the Windows 10 Template. Let's do this whole thing all over again but with Windows Server 2019.
