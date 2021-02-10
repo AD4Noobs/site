@@ -14,7 +14,7 @@ First download the 2 files listed below.
 | Name                      | Download                                                                                                                                                                                                                        |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | VirtualBox Application    | {{% button href="https://download.virtualbox.org/virtualbox/6.1.18/VirtualBox-6.1.18-142142-Win.exe" icon="fas fa-download" %}} VirtualBox-6.1.18-142142-Win.exe {{% /button %}}                                                |
-| Virtualbox Extension Pack | {{% button href="https://download.virtualbox.org/virtualbox/6.1.18/Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack " icon="fas fa-download" %}} Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack {{% /button %}} |
+| Virtualbox Extension Pack | {{% button href="https://download.virtualbox.org/virtualbox/6.1.18/Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack" icon="fas fa-download" %}} Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack {{% /button %}} |
 
 ## Virtualbox Application
 
