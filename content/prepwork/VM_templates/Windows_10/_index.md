@@ -167,7 +167,7 @@ During this process you will need to reboot multiple times and keep checking for
 
 You know when you are done updating when the 'Check for updates' button returns 'You're up to date' and returns no further updates.
 
-![](updates_done.png)
+![](updates_done.gif)
 
 ## Windows time
 

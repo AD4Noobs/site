@@ -120,7 +120,7 @@ I always add the login credentials to the descriptions of my **local testing** V
 ![](virtbox_creds.png)
 
 Now we have a clean install of Windows Server. To logon go to 
-`Input -> keyboard -> 'Insert ctrl+alt+del'` in Virtualbox and logon with the previously set password.
+`Input -> Keyboard -> 'Insert ctrl+alt+del'` in Virtualbox and logon with the previously set password.
 
 ![](ctrl_alt_del.gif)
 
