@@ -203,4 +203,4 @@ Back in VirtualBox click on the 3 squares and lines next to the VM. Then choose 
 
 ## Finished!
 
-Now we are done fully with the preparations. Go grab a drink and give your self a pat on the back. In the next chapter will start with the real meat of this guide.
+Now we are done fully with the technical preparations. Go grab a drink and give your self a pat on the back. In the next chapter will start with the real meat of this guide. There is however a but more work left for you to do, which is required knowledge.
