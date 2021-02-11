@@ -47,15 +47,13 @@ From here go to `Storage` , click on `Empty`, select `Live CD/DVD` and then clic
 
 Go to the location where you stored the Windows ISO's we downloaded previously and select the Windows Server 2019 ISO, then click on OK.
 
+![](new_server_10.png)
+
 **Note:** It probably has something like `SERVER_EVAL` in its name.
 
 ## Installing Windows Server 2019
 
-To start your VM double click on `Windows 10 Template`.
-
-![](new_server_10.png)
-
-When you start the VM this prompt could pop up. When it does click on Cancel.
+To start your VM double click on `Windows 10 Template`. When you start the VM this prompt could pop up. When it does click on Cancel.
 
 ![](new_server_11.png)
 
