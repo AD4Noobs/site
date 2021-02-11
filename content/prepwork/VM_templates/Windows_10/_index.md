@@ -23,7 +23,7 @@ Choose `Create a virutal had disk now` and click Next.
 
 ![](new_vm_04.png)
 
-Choose `VDI (VirutalBox Disk Image)` and click Next.
+Choose `VDI (VirtualBox Disk Image)` and click Next.
 
 ![](new_vm_05.png)
 
@@ -34,11 +34,11 @@ Choose `Dynamically allocated` and click Next.
 Use at least `60GB` of disk space and click create.
 
 **Note:** This space is Dynamically allocated, meanings it won't take up the full 60GB at the start.
-Your virtual hard disk will grow on your pyhiscial harddisk when start using the space inside on your VM.
+Your virtual hard disk will grow on your physical harddisk when start using the space inside on your VM.
 
 ![](new_vm_07.png)
 
-Click on your new `WIndows 10 Template` VM and then on `Settings`.
+Click on your new `Windows 10 Template` VM and then on `Settings`.
 
 ![](new_vm_08.png)
 
@@ -58,7 +58,7 @@ To start your VM double click on `Windows 10 Template`.
 
 ![](new_vm_08.png)
 
-When you start the VM this prompt should pop up. If it does click on Cancel.
+When you start the VM this prompt could pop up. When it does click on Cancel.
 
 ![](new_vm_11.png)
 
@@ -162,7 +162,8 @@ And click on `Check for updates`.
 
 ![](new_vm_34.png)
 
-During this process you will need to reboot multiple times and keep checking for new updates.   
+During this process you will need to reboot multiple times and keep checking for new updates.
+
 You know when you are done updating when the 'Check for updates' button returns 'You're up to date' and returns no further updates.
 
 ![](updates_done.png)
@@ -183,7 +184,7 @@ If the time is incorrect/not updating after changing the time zone, turn off and
 
 ## Guest additions
 
-One of the last things we need todo in our template is install VirutalBox guest additions.
+One of the last things we need todo in our template is install VirtualBox guest additions.
 
 Once you are done updating your VM go to `Devices -> Insert guest additions CD image` in Virtualbox. If this is the first time doing this you **might** be prompted to download them, ifso click on Download. If not skip the next 3 steps.
 
@@ -221,17 +222,18 @@ Now the Guest additions installation should finish up. Once its done check `rebo
 
 ![](new_vm_45.png)
 
+When the machine has fully powered off click on the VM and open `Settings`. Now go to `Storage`, select the `VBoxGuestAdditions...`-drive and right click on it. Then click click on `Remove Attachment` and then Remove.
+
+![](remove_virtbox_iso.gif.gif)
+
 ## Create Snapshot
 
 Since we now have a VM in a nice clean and prepared state we want to create a snapshot of it. A snapshot is basically a copy of your VM at a given point in time. This snapshot will allow us to create `Linked clone` which will save us time and disk space.
 
-Back in Virutalbox click on the 3 squares and lines next to the VM. Then choose `Snapshots` and click on `Take`.
+Back in VirtualBox click on the 3 squares and lines next to the VM. Then choose `Snapshots` and click on `Take`. Now enter a name for the snapshot. In the case of Templates I like to note down what kind it is (in this case a clean VM) and when it was last updated.
 
-![](new_vm_46.png)
+![](create_snapshot.gif)
 
-Now enter a name for the snapshot. In the case of Templates I like to note down what kind it is (in this case a clean VM) and when it was last updated.
-
-![](new_vm_47.png)
 
 ## Finished!
 
