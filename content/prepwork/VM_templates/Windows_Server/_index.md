@@ -146,7 +146,7 @@ During this process you will need to reboot multiple times and keep checking for
 
 ![](updates_2.png)
 
-You know when you are done updating when the 'Check for updates' button returns 'You're up to date' and returns no further updat
+You know when you are done updating when the 'Check for updates' button returns 'You're up to date' and returns no further updates.
 
 ![](updates_done.gif)
 

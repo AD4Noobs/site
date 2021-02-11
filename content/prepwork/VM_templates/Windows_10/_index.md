@@ -186,7 +186,7 @@ If the time is incorrect/not updating after changing the time zone, turn off and
 
 One of the last things we need todo in our template is install VirtualBox guest additions.
 
-Once you are done updating your VM go to `Devices -> Insert guest additions CD image` in Virtualbox. If this is the first time doing this you **might** be prompted to download them, ifso click on Download. If not skip the next 3 steps.
+Once you are done updating your VM go to `Devices -> Insert guest additions CD image` in Virtualbox. If this is the first time doing this you **might** be prompted to download them, if so click on Download. If not skip the next 3 steps.
 
 ![](new_vm_37.png)
 
