@@ -3,6 +3,7 @@ title: "Downloading ISO's"
 date: 2021-02-08T14:44:15+01:00
 draft: false
 weight: 1
+pre: "<b>0.1 </b>"
 ---
 
 First of all before we can start installing VMs we need to download the operating systems. Luckily for us Microsoft offers users to download trial versions of their OS.

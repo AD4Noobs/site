@@ -3,6 +3,7 @@ title: "VM Templates"
 date: 2021-02-08T15:34:40+01:00
 draft: false
 weight: 3
+pre: "<b>0.3 </b>"
 ---
 
 To save on time and disk space we will be creating 2 Templates. 1 Windows Server template and Windows 10 Client Template.

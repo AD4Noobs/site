@@ -3,6 +3,7 @@ title: "Virtualbox Installation"
 date: 2021-02-08T15:25:42+01:00
 draft: false
 weight: 2
+pre: "<b>0.2 </b>"
 ---
 
 Next we need a virtualization application. For this guide we will use Virtualbox.
