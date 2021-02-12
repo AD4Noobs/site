@@ -165,7 +165,7 @@ If the time is incorrect/not updating after changing the time zone, turn off and
 
 ## Guest additions
 
-One of the last things we need todo in our template is install VirtualBox guest additions.
+One of the last things we need todo in our template is install VirtualBox guest additions. Its pretty much the same as it was on Windows 10. First add the disk using Virtualbox.
 
 ![](new_server_27.gif)
 
