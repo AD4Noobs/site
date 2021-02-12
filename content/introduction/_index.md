@@ -68,7 +68,7 @@ If there's an issue while deploying a 'new product' it needs to be solved ASAP. 
 
 Which can be fine if you are, for example, in a time crunch and it gets accepted as an *acceptable risk from a business operations perspective*, but only if the intent is to actually fix this on a later date. Which most of the time never happens. Since now there is this fear of *"If we touch it we might break it and invoke the wrath of the office monkeys"*.
 
-Luckily duo changes in the industry security is getting more of a front row seat. Now it can cost a company a lot of money if they, for example, get hit with ransomware. But since AD is such a fundamental piece of a corporate environment and everything is connected to it it's hard to clean up or start with a clean slate.
+Luckily duo changes in the industry security is getting more of a front row seat. Now it can cost a company a lot of money if they, for example, get hit with ransomware. But AD is such a fundamental piece of a corporate environment and a lot is connected to it. This means it can be really hard to clean up if its 'really messy' state or even start from a scratch.
 
 ##### Managing office monkeys
 
