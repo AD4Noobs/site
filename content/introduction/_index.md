@@ -56,7 +56,7 @@ Don't get me wrong, but a lot of companies still use Microsoft Exchange to this 
 
 {{%expand "Microsoft also developed these things called 'Roles and Features' which are part of Windows Servers, such as a Remote Desktop Server (RDS). This basically is a 'Remote Workspace/Computer' that a user can log on to access the corporate network, without AD in place it would be virtually impossible to deploy this in any form in a medium or large scale deployment." %}} Technically speaking AD DS is also a role, but you will soon learn that. {{% /expand%}}
 
-#### The negatives and the ugly truth about why most AD environments are laughable insecure
+#### The negatives and the ugly truth about why most AD environments are laughably insecure
 
 The down side of this that since everything is integrated it get complicated and messy pretty fast. In order for most external products to function they need some form of administrative access within AD and/or the network. Since traditionally IT has been underfunded and understaffed this sometimes results (Read most of the times) in a security being put in the back seat.
 
