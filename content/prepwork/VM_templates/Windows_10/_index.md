@@ -223,7 +223,7 @@ Now the Guest additions installation should finish up. Once its done check `rebo
 
 ![](new_vm_45.png)
 
-When the machine has fully powered off click on the VM and open `Settings`. Now go to `Storage`, select the `VBoxGuestAdditions...`-drive and right click on it. Then click click on `Remove Attachment` and then Remove.
+When the machine has fully powered off click on the VM and open `Settings`. Now go to `Storage`, select the `VBoxGuestAdditions...`-drive and right click on it. Then click on `Remove Attachment` and then Remove.
 
 ![](remove_virtbox_iso.gif.gif)
 
