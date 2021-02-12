@@ -41,4 +41,5 @@ AD is the cornerstone of pretty much every Windows domain network. It does thing
 - Allows or restricts access to resources/applications in the network;
 - Enforce the appropriate configuration/policy of user or computer settings.
 
-This is why most companies use it, from a functional point of view it does a lot, if not everything, a company needs in order to create a function work environment.
+This is why most companies use it. From a functional point of view it does a lot, if not everything, a company needs in order to create a function work environment, so its often been the goto solution.
+
