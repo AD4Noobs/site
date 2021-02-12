@@ -21,9 +21,9 @@ So let's imagine you need to run 'The IT' for a fictitious company called 'Three
 - Paper pushing office monkeys
 - {{%expand "Management" %}} Don't let them catch you call them that. They liked to be referred to as Pirate Lords. You don't want to find out what happens when you do and are send to Big Whoop. {{% /expand%}}
 
-To function as a company all these people with different functions need a way to work together. As you can might imagine some of these people need access to specific files or systems in 'The IT' infrastructure while others just need to be able to manage the register. There's also the fact that someone in HR might need a specific program installed on their system or that the office monkeys work in a 'Flexspace', meaning they just walk up to a random computer, mash in their user credentials and expect the computer to be configured in a specific way.
+To function as a company all these people with different functions need a way to work together. As you can might imagine some of these people need access to specific files or systems in 'The IT' infrastructure while others just need to be able to manage the cash register and read e-mails. There's also the fact that someone in HR might need a specific program installed on their system or that the office monkeys work in a 'Flexspace', meaning they just walk up to a random computer, mash in their user credentials and expect the computer to be configured in a specific way.
 
-{{< figure src="monkey.gif" title="Here's only login on right now." >}}
+{{< figure src="monkey.gif" title="Here's one login on right now." >}}
 
 So in order to provide this segmented access within the company Active Directory Services comes in. Active Directory Services is a combined name for multiple different kind of services, one of which is Active Directory Domain Services. Right now where not going to talk about the these other services but if you are interested here are a [couple](https://www.youtube.com/watch?v=J8y4G0dD-hg) [of](https://www.youtube.com/watch?v=ewn6TaG5GDg) [video's](https://www.youtube.com/watch?v=x0HXDL7i0Wo).
 
@@ -32,7 +32,7 @@ Active Directory Domain Services is commonly abbreviated as AD DS or if you are 
 
 {{% /notice %}}
 
-## Active Directory Domain Services
+## Active Directory Domain Services and the Windows eco system
 
 AD is the cornerstone of pretty much every Windows domain network. It does things such as:
 
@@ -41,5 +41,39 @@ AD is the cornerstone of pretty much every Windows domain network. It does thing
 - Allows or restricts access to resources/applications in the network;
 - Enforce the appropriate configuration/policy of user or computer settings.
 
-This is why most companies use it. From a functional point of view it does a lot, if not everything, a company needs in order to create a function work environment, so its often been the goto solution.
+This is why most companies use it. It lays a foundation to build something upon.
 
+#### The positives
+
+From a functional point of view it does a lot, if not everything, a company needs in order to create a function work environment, so its often been the goto solution. This also means that over the years most other corporate software/appliances now support integrating with AD, allowing products and users to work more seamlessly.
+
+This includes Microsoft themselves. You might have heard of Office365 by now, but before the might cloud existed they also build a mailing product called `Microsoft Exchange`. When you deploy Exchange in a environment it gets heavily integrated into Active Directory, as a requirement it even extends the 'AD Database' (AD Schema).
+
+{{% notice note %}}
+Don't get me wrong, but a lot of companies still use Microsoft Exchange to this day instead of Office365. There are actually ways to integrate AD/Exchange with Office365/Microsoft Azure AD creating this unholy matrimony of hybrid on-premise and cloud.
+
+{{% /notice %}}
+
+{{%expand "Microsoft also developed these things called 'Roles and Features' which are part of Windows Servers, such as a Remote Desktop Server (RDS). This basically is a 'Remote Workspace/Computer' that a user can log on to access the corporate network, without AD in place it would be virtually impossible to deploy this in any form in a medium or large scale deployment." %}} Technically speaking AD DS is also a role, but you will soon learn that. {{% /expand%}}
+
+#### The negatives and the ugly truth about why most AD environments are laughable insecure
+
+The down side of this that since everything is integrated it get complicated and messy pretty fast. In order for most external products to function they need some form of administrative access within AD and/or the network. Since traditionally IT has been underfunded and understaffed this sometimes results (Read most of the times) in a security being put in the back seat.
+
+##### The mind set
+
+*"I need to get things up and and running so my office monkeys won't complain. They need to be able to work."* is the main driving force in most IT operations.
+
+If there's an issue while deploying a 'new product' it needs to be solved ASAP. If that means a hail mary solution like *"Giving the product Full admin/'Domain Admin' rights"* fixes the issue it gets deployed like that.
+
+Which can be fine if you are, for example, in a time crunch and it gets accepted as an *acceptable risk from a business operations perspective*, but only if the intent is to actually fix this on a later date. Which most of the time never happens. Since now there is this fear of *"If we touch it we might break it and invoke the wrath of the office monkeys"*.
+
+Luckily duo changes in the industry security is getting more of a front row seat. Now it can cost a company a lot of money if they, for example, get hit with ransomware. But since AD is such a fundamental piece of a corporate environment and everything is connected to it it's hard to clean up or start with a clean slate.
+
+##### Managing office monkeys
+
+Speaking about paper pushing office monkeys, another big factor is managing them. Monkey just want to push **ALL THE** buttons, throw papers and eat banana's, they don't care about anything else. Which is fine, they are great at pushing buttons, but you don't want them to break things by for example clicking on that phishing e-mail link that promises *Free Banana's* and *totally won't install malware*. So you start to locking things down, increase security and try to prevent bad things happening. But the monkeys start to notice, and they find it an annoyance. And boy can the monkeys complain if there is something they find an annoyance.
+
+{{< figure src="monkey2.gif" title="Here's one after finding out he can't use 'Banana2021' as its password anymore." >}}
+
+So what can happen if we don't teach the monkeys or their managers why we do this ? Security standards can get decreased. Meaning now there are hundreds of banana passwords in you AD. And believe me, you don't want banana's in your AD 🍌.
