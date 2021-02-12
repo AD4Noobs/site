@@ -22,18 +22,10 @@ Probably because I used it a lot in my past jobs and since after I started doing
 
 After starting a job as an Ethical Hacker I came into contact with a lot of internal networks. Pretty much on all these internal assessments Active Directory (and everything that comes with it) was the weakest link or was heavily part of me gaining administrative access in the network. This leads me to believe that there is a general lack of (basic and security) Active Directory knowledge or it's missing from where it matters the most. I think this is perfectly backed up if you look at the current state of malware, and more specifically cryptoware/ransomware.
 
-{{< figure src="ad_ransomware.png?width=25pc"  title="Just google 'ransomware active directory'" >}}
+{{< figure src="ad_ransomware.png?width=25pc" title="Just google 'ransomware active directory'" >}}
 
 ### The why and the goal
 
-So when I got the chance to give a 2 day workshop on Active Directory I decided to create this, for lack of better words, guide. I personally think that the best way to learn this stuff is by doing it, though at some points some explication can help with the learning process and avoid common pitfalls.
-
-The main goal of this guide is to get someone without any Active Directory knowledge up and running with the basics.
-The 'perfect endgoal' would be to have this guide fully cover known attack methods so I can also refer IT professionals to this site.
-I would like to cover them along the following lines:
-
-- How these are created/or why they exists by default in Active Directory;
-- How they can be exploited;
-- How someone can fix and/or prevent them from happening in the first place.
+So when I got the chance to give a 2 day workshop on Active Directory I decided to create this, for lack of better words, guide. I personally think that the best way to learn this stuff is by doing it, though at some points some explication can help with the learning process and avoid common pitfalls. The main goal of this guide is to get someone without any Active Directory knowledge up and running with the basics needed knowledge. If possible i'd like to extend this to include Offensive/Defense points outside of the general IT administrator way of thinking. This to potentially help prevent the current state of things from continuing in the future.
 
 If you work in the IT/InfoSec field and feel inclined to help with this endeavour you can submit a [PR on github](https://github.com/AD4Noobs/site) or get in contact with me on [Twitter](https://twitter.com/justinperdok).
