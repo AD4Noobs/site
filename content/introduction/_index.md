@@ -47,7 +47,7 @@ This is why most companies use it. It lays a foundation to build something upon.
 
 From a functional point of view it does a lot, if not everything, a company needs in order to create a function work environment, so its often been the goto solution. This also means that over the years most other corporate software/appliances now support integrating with AD, allowing products and users to work more seamlessly.
 
-This includes Microsoft themselves. You might have heard of Office365 by now, but before the might cloud existed they also build a mailing product called `Microsoft Exchange`. When you deploy Exchange in a environment it gets heavily integrated into Active Directory, as a requirement it even extends the 'AD Database' (AD Schema).
+This includes Microsoft themselves. You might have heard of Office365 by now, but before the mighty cloud existed they also build a mailing product called `Microsoft Exchange`. When you deploy Exchange in a environment it gets heavily integrated into Active Directory, as a requirement it even extends some parts of AD (the AD Schema).
 
 {{% notice note %}}
 Don't get me wrong, but a lot of companies still use Microsoft Exchange to this day instead of Office365. There are actually ways to integrate AD/Exchange with Office365/Microsoft Azure AD creating this unholy matrimony of hybrid on-premise and cloud.
