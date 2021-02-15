@@ -21,7 +21,7 @@ When downloading trial ISO's Microsofts website it will require some personal in
 Click on the following link: [Download Windows 10 ISO](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-10-enterprise)
 
 Select `ISO - Enterprise` and click on Continue.
-beterbeter
+
 ![ISO - Enterprise](iso_client_01.png)
 
 Enter the required information and click on Continue.
