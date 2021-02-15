@@ -42,7 +42,7 @@ Click on your new `Windows Server 2019 Template` VM and then on `Settings`.
 
 ![](new_server_08.png)
 
-From here go to `Storage` , click on `Empty`, select `Live CD/DVD` and then click on the CD/DVD icon and `Choose a disk file...`.
+From here go to `Storage`, click on `Empty`, select `Live CD/DVD` and then click on the CD/DVD icon and `Choose a disk file...`.
 
 ![](new_server_09.png)
 
@@ -70,9 +70,9 @@ Just click on Install Now to continue.
 
 Here we can choose from 4 different version of Windows Server.
 
-Standard and Datacenter, both with the option for with and without a GUI. 
+Standard and Datacenter, both with the option for with and without a GUI.
 
-The difference between standard and datacenter is it target audience and license cost/features. Standard is designed for small-to-medium-sized organizations and allows you to run 2 virtual machines with Hyper-V (Microsofts virutalization software). Datacenter edition is optimized for large-scale virtualization in the datacenter and allows for 'unlimited' VMs. When I say 'unlimited' this is "license speak™", meaning you are still bound to the capabilities of your hardware, but there wont be a license based softlock preventing you from creating more VMs in Hyper-V.
+The difference between standard and datacenter is it target audience and license cost/features. Standard is designed for small-to-medium-sized organizations and allows you to run 2 virtual machines with Hyper-V (Microsoft's virtualization software). Datacenter edition is optimized for large-scale virtualization in the datacenter and allows for 'unlimited' VMs. When I say 'unlimited' this is "license speak™", meaning you are still bound to the capabilities of your hardware, but there won't be a license based softlock preventing you from creating more VMs in Hyper-V.
 
 It also has some extra options like:
 
@@ -82,12 +82,12 @@ It also has some extra options like:
 - 'Unlimited' Storage Replicas;
 - Storage Spaces Direct.
 
-The other version of Windows Server refer to Windows Core and Desktop Experience (GUI). GUI is what will probably feel most familiar if you used a Windows OS before. Desktop Experience contains a GUI, rendering the machine comparatively user-friendly and easier to manage either remotely or locally.
+The other version of Windows Server refers to Windows Core and Desktop Experience (GUI). GUI is what will probably feel most familiar if you used a Windows OS before. Desktop Experience contains a GUI, rendering the machine comparatively user-friendly and easier to manage either remotely or locally.
 
 Core is a strapped down version of Windows Server and generally it does not have a GUI. Server Core it is meant to only be managed remotely, or it can be locally managed via command line and PowerShell.
 Since Core is a strapped down version it has a smaller footprint (less CPU, RAM and disk usage).
 
-Since we don't need the extra option Datacenter gives and we want to keep this as simple as possible will be working with Windows Server 2019 Standard (Desktop Experience). If you are curious however I advocate you to try and setup a AD lab with Windows Core after you have done it once with a GUI. This will teach you a bunch about AD PowerShell command's that can help you if you want to learn about automating AD.
+Since we do not need the extra option Datacenter gives and we want to keep this as simple as possible will be working with Windows Server 2019 Standard (Desktop Experience). If you are curious however I advocate you to try and setup a AD lab with Windows Core after you have done it once with a GUI. This will teach you a bunch about AD PowerShell command's that can help you if you want to learn about automating AD.
 
 **TL:DR** Choose `Windows Server 2019 Standard Evaluation (Desktop Experience)` and click on Next.
 
@@ -108,7 +108,7 @@ Now click on `Drive 0 Unallocated Space` (this is your virtual harddisk) and cli
 Once it finishes you will be prompted to enter a password. Enter `Password01!` as the password.
 
 {{% notice warning %}}
-You should **not** use a weak password like this in a production environment. For **local testing purposes** (i.e. not connected to the public internet and segmented in a virtual network)  this should be fine.
+You should **not** use a weak password like this in a production environment. For **local testing purposes** (i.e. not connected to the public internet and segmented in a virtual network) this should be fine.
 {{% /notice %}}
 
 ![](new_server_18.png)
@@ -119,8 +119,8 @@ I always add the login credentials to the descriptions of my **local testing** V
 
 ![](virtbox_creds.png)
 
-Now we have a clean install of Windows Server. To logon go to 
-`Input -> Keyboard -> 'Insert ctrl+alt+del'` in Virtualbox and logon with the previously set password.
+Now we have a clean install of Windows Server. To logon go to
+`Input -> Keyboard -> 'Insert ctrl+alt+del'` in VirtualBox and logon with the previously set password.
 
 ![](ctrl_alt_del.gif)
 
@@ -129,7 +129,7 @@ The first thing that should be prompted is server manager. When it loads it will
 ![](new_server_21.png)
 ## Windows updates
 
-Once Windows has been fully setup we can start updating it to the latest version. Click on start and go to `Settings`.
+Once Windows has been fully set up we can start updating it to the latest version. Click on start and go to `Settings`.
 
 ![](new_server_22.png)
 
@@ -151,7 +151,7 @@ You know when you are done updating when the 'Check for updates' button returns 
 
 ## Windows time
 
-Since a Active Directory is sensitive to time (de)synchronization issues between Clients and Active Directory it is imported we setup system time correctly in our templates.
+Since an Active Directory is sensitive to time (de)synchronization issues between Clients and Active Directory it is imported we set up system time correctly in our templates.
 
 To open the system time settings right click on the date/time on the startbar en select `Adjust date/time`.
 
@@ -165,7 +165,7 @@ If the time is incorrect/not updating after changing the time zone, turn off and
 
 ## Guest additions
 
-One of the last things we need todo in our template is install VirtualBox guest additions. Its pretty much the same as it was on Windows 10. First add the disk using Virtualbox.
+One of the last things we need to do in our template is install VirtualBox guest additions. It's pretty much the same as it was on Windows 10. First add the disk using VirtualBox.
 
 ![](new_server_27.gif)
 
@@ -185,11 +185,11 @@ You might get prompted to install device software, if so click Install.
 
 ![](new_server_31.png)
 
-Now the Guest additions installation should finish up. Once its done check reboot now and once its rebooted shutdown the VM.
+Now the Guest additions installation should finish up. Once it's done check reboot now and once its rebooted shutdown the VM.
 
 ![](new_server_32.png)
 
-When the machine has fully powered off click on the VM and open `Settings`. Now go to `Storage`, select the `VBoxGuestAdditions...`-drive and right click on it. Then click click on `Remove Attachment` and then Remove.
+When the machine has fully powered off click on the VM and open `Settings`. Now go to `Storage`, select the `VBoxGuestAdditions...`-drive and right click on it. Then click on `Remove Attachment` and then Remove.
 
 ![](remove_virtbox_iso.gif)
 
@@ -203,4 +203,4 @@ Back in VirtualBox click on the 3 squares and lines next to the VM. Then choose 
 
 ## Finished!
 
-Now we are done fully with the technical preparations. Go grab a drink and give your self a pat on the back. In the next chapter will start with the real meat of this guide. There is however a but more work left for you to do, which is required knowledge.
+Now we are done fully with the technical preparations. Go grab a drink and give yourself a pat on the back. In the next chapter will start with the real meat of this guide. There is however a bit more work left for you to do, which is required knowledge.
