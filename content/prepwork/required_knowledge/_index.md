@@ -21,3 +21,7 @@ I curated a couple of, relatively speaking, short and condensed videos on these 
 ### Intro to DNS
 
 {{< youtube uOfonONtIuk >}}
+
+### Intro to DHCP
+
+{{< youtube S43CFcpOZSI >}}
