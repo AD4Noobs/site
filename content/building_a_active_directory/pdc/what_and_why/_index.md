@@ -17,7 +17,7 @@ Before we can cover Domain, Sites, Tree and Forest we first need to cover what o
 
 A object in AD is just a basic element that represents something. 
 
-It could be a user, computer, group or even a printer attached to the network.
+It could be a user, computer, group, folders, or even a printer attached to the network.
 
 ![](objects.png)
 
@@ -35,13 +35,20 @@ Every object of the same type has the same set of attributes, some of which are 
 
 For example, the name of the user is something that is mandatory, while their phone number is not. But regardless of that attribute being used or not, its still a object that belongs to the user class.
 
-To make this a bit less abstract lets think of these objects and attributes as living things. 
+The objects basically come in two flavours Container objects Leaf objects:
 
-#### They Donkeys and Ogre's
+- Container objects can contain other objects.  
+  As an example, a Group object is an container. It can contain other objects such as users.
+- Leaf objects, on the other hand, are just a single things.  
+  As an example, users and computers are leaf objects.
 
-Everything alive (objects) has some defining features (attributes) that make it into what it is (class).
+To make this a bit less abstract lets think of these objects and attributes as 'physical' things. 
 
-{{%expand "You know which mandatory defining features a Donkey has and why it's different from Ogre. But that does not mean that all other Donkeys have to be precisely the same." %}}
+#### The Donkeys, Ogre's, Dragons and Castles
+
+Everything (objects) has some defining features (attributes) that make it into what it is (class).
+
+{{%expand "You know which mandatory defining features a donkey has and why it's different from a ogre, dragon or even a castle. But that does not mean that all other donkeys have to be precisely the same." %}}
 
 ![](layers.gif)
 
@@ -53,10 +60,17 @@ All Donkeys walk on 4 legs, have fur all over their body and have a tail. These 
 
 Even though not all objects with the donkey class have the same height or weight (optional attributes), and in this particular example the ability to speak and sing, but they are all considered donkeys because they have the mandatory attributes for that class.
 
+{{%expand "We also can't fit ogre's and dragons into a donkey." %}}
+
+I know what you are thinking... no... we can't.
+
+{{% /expand%}}
+
+We can however fit all of those into a Castle. This is because a Castle is an Container Object and a Donkey is a Leaf Object.
 ### The Schema
 
 So now that we know our Active Directory can contain Donkeys and Ogre's we can talk about the Active Directory Schema.
-The schema of Active Directory defines the rules how a object class looks, what attributes are mandatory and are which ones optional. It's basically a giant collection of blueprints for all objects in Active Directory, each class type has one.
+The schema of Active Directory defines the rules how a object class looks like, what attributes are mandatory and are which ones optional. It's basically a giant collection of blueprints for all objects in Active Directory, each class type has one.
 
 ![](blueprint.png)
 
