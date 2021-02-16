@@ -78,7 +78,7 @@ Leave all the settings on the Paths page on the defaults and click on Next.
 In production environments I'd recommend using separate hard drives for these paths. Using separate hard drives comes with multiple advantages, some are a bit complicated and out of scope (Backup strategies/IOPS/disk partitions block sizes), but a simple example would be preventing something like Windows Updates from eating up all available the disks space and cause issues with AD updating values in it's database.
 {{% /notice %}}
 
-Click Next on the Review Options page. 
+Click Next on the Review Options page.
 
 Normally you would double check if everything is up to snuff, but you paid attention to the guide and followed it to the T right ? 😄
 
