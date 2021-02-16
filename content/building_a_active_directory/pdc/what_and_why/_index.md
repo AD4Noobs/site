@@ -149,7 +149,7 @@ As you might remember from earlier, roles are built in packages into Windows Ser
 
 ![](functional_levels.png)
 
-Functional Levels determine which version of Windows Server are allowed to host the AD DS role in the domain. During the installation process we use a Domain Functional Level of Server 2016. This means that only we can only create Domain Controllers using at least Windows Server 2016. Any version lower, for example Server 2012R2, will not be able to be promoted to a Domain Controller is this domain.
+Functional Levels determine which version of Windows Server are allowed to host the AD DS role in the domain. During the installation process we use a Domain Functional Level of Server 2016, since we want to make use of the newest features. This means that only we can only create Domain Controllers using at least Windows Server 2016. Any version lower, for example Server 2012R2, will not be able to be promoted to a Domain Controller is this domain.
 
 {{% notice info %}}
 The tech savvy among you probably already thought of a work around. Yes you could create new child domains for the purpose to support older or new versions of AD DS, though it is highly recommended phase out older Windows Servers running Domains Controllers in your domain in favor of newer version of Windows Server. This allows you to most recent functional level and make use of new features, a lot of which have been security focused.
@@ -171,7 +171,7 @@ A Read-Only Domain Controller would allow people in this branch office to still 
 NTDS.dit is the file that contains the Active Directory Database. It stores all the information about the Domain of which the current Domain Controller is part of.
 
 {{% notice note %}}
-As an attacker going after AD this is ***THE*** file we want to get our hands on. This file contains every user attribute, including normally protected and hidden attributes such as the users password (hash). After gaining access to this file we are able to start cracking user passwords or even create magic [GoldenTicket](http://blog.gentilkiwi.com/securite/mimikatz/golden-ticket-kerberos).
+As an attacker going after AD this is **the** file we want to get our hands on. This file contains every user attribute, including normally protected and hidden attributes such as the users password (hash). After gaining access to this file we are able to start cracking user passwords, create magic a [GoldenTicket](http://blog.gentilkiwi.com/securite/mimikatz/golden-ticket-kerberos) and other 'fun' stuff.
 {{% /notice %}}
 
 ## SYSVOL
