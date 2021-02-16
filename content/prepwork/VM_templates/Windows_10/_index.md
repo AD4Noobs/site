@@ -20,7 +20,7 @@ Set the memory size to a minimum of 2048MB
 
 ![](new_vm_03.png)
 
-Choose `Create a virutal had disk now` and click Next.
+Choose `Create a virtual had disk now` and click Next.
 
 ![](new_vm_04.png)
 
@@ -43,7 +43,7 @@ Click on your new `Windows 10 Template` VM and then on `Settings`.
 
 ![](new_vm_08.png)
 
-From here go to `Storage` , click on `Empty`, select `Live CD/DVD` and then click on the CD/DVD icon and `Choose a disk file...`.
+From here go to `Storage`, click on `Empty`, select `Live CD/DVD` and then click on the CD/DVD icon and `Choose a disk file...`.
 
 ![](new_vm_09.png)
 
@@ -85,7 +85,7 @@ Now wait for the installation process to complete.
 
 ## Post installation configuration
 
-Once the installation is completed you will be created with this screen. Here we need todo some post installation configuration.
+Once the installation is completed you will be created with this screen. Here we need to do some post installation configuration.
 
 Select `United States` and click on Yes.
 
@@ -99,10 +99,10 @@ Here simply click on Skip.
 
 ![](new_vm_19.png)
 
-Now we are prompted to choose our account type.Since we are using these templates for testing purposes we don't want to link them to a online account, so click on `Domain join instead`
+Now we are prompted to choose our account type. Since we are using these templates for testing purposes we don't want to link them to a online account, so click on `Domain join instead`
 
 {{% notice info %}}
-On previous iterations of the windows installer you had the option to create a `Local Account`, this option has been renamed to `Domain join instead`.
+On previous iterations of the Windows installer you had the option to create a `Local Account`, this option has been renamed to `Domain join instead`.
 {{% /notice %}}
 
 ![](new_vm_20.png)
@@ -114,7 +114,7 @@ Enter `user` as the username
 Enter `Password01!` as the password.
 
 {{% notice warning %}}
-You should **not** use a weak password like this in a production environment. For **local testing purposes** (i.e. not connected to the public internet and segmented in a virtual network)  this should be fine.
+You should **not** use a weak password like this in a production environment. For **local testing purposes** (i.e. not connected to the public internet and segmented in a virtual network) this should be fine.
 {{% /notice %}}
 
 ![](new_vm_23.png)
@@ -122,7 +122,7 @@ You should **not** use a weak password like this in a production environment. Fo
 Now confirm the password.
 
 {{% notice warning %}}
-Again, please don't use these weak passwords like this in production. Sadly I still find passwords like these on almost all my internal assessments.
+Again, please don't use these weak passwords like this in production. Sadly, I still find passwords like these on almost all my internal assessments.
 {{% /notice %}}
 
 ![](new_vm_24.png)
@@ -133,15 +133,15 @@ I always add the login credentials to the descriptions of my **local testing** V
 
 ![](creds_virtualbox.png)
 
-Now you need enter 3 security questions. You can just use bogus answers. We can always reset the password using multiple other methods, If we even manage to forget this easy password in the first place.
+Now you need enter 3 security questions. You can just use bogus answers. We can always reset the password using multiple other methods, if we even manage to forget this easy password in the first place.
 
 ![](new_vm_25.png)
 
-Now we have to go through somethings i'd like to call `MicroSpyingSoft` settings. Just disable every option and click on accept.
+Now we have to go through somethings I'd like to call `MicroSpyingSoft` settings. Just disable every option and click on accept.
 
 ![](new_vm_28.png)
 
-{{%expand "On the next screen it will ask you to active cortana, just click on not now." %}} Unless you are a wierdo and want to talk to your pc. You wierdo.{{% /expand%}}
+{{%expand "On the next screen it will ask you to active Cortana, just click on not now." %}} Unless you are a wierdo and want to talk to your pc. You wierdo.{{% /expand%}}
 
 ![](new_vm_29.png)
 
@@ -151,7 +151,7 @@ Now simply do as Microsoft says and let them handle things. Just sit back and re
 
 ## Windows updates
 
-Once Windows has been fully setup we can start updating it to the latest version. Click on start and go to `Settings`.
+Once Windows has been fully setup, we can start updating it to the latest version. Click on start and go to `Settings`.
 
 ![](new_vm_31.png)
 
@@ -171,9 +171,9 @@ You know when you are done updating when the 'Check for updates' button returns 
 
 ## Windows time
 
-Since a Active Directory is sensitive to time (de)synchronization issues between Clients and Active Directory it is imported we setup system time correctly in our templates.
+Since an Active Directory is sensitive to time (de)synchronization issues between Clients and Active Directory it is imported we setup system time correctly in our templates.
 
-To open the system time settings right click on the date/time on the startbar en select `Adjust date/time`.
+To open the system time settings right click on the date/time on the startbar and select `Adjust date/time`.
 
 ![](new_vm_35.png)
 
@@ -185,9 +185,9 @@ If the time is incorrect/not updating after changing the time zone, turn off and
 
 ## Guest additions
 
-One of the last things we need todo in our template is install VirtualBox guest additions.
+One of the last things we need to do in our template is install VirtualBox guest additions.
 
-Once you are done updating your VM go to `Devices -> Insert guest additions CD image` in Virtualbox. If this is the first time doing this you **might** be prompted to download them, if so click on Download. If not skip the next 3 steps.
+Once you are done updating your VM go to `Devices -> Insert guest additions CD image` in VirtualBox. If this is the first time doing this you **might** be prompted to download them, if so, click on Download. If not skip the next 3 steps.
 
 ![](new_vm_37.png)
 
@@ -219,7 +219,7 @@ When it asks you install device software to click Install
 
 ![](new_vm_44.png)
 
-Now the Guest additions installation should finish up. Once its done check `reboot now` and once its rebooted shutdown the VM.
+Now the Guest additions installation should finish up. Once it's done check `reboot now` and once its rebooted shutdown the VM.
 
 ![](new_vm_45.png)
 
@@ -234,7 +234,6 @@ Since we now have a VM in a nice clean and prepared state we want to create a sn
 Back in VirtualBox click on the 3 squares and lines next to the VM. Then choose `Snapshots` and click on `Take`. Now enter a name for the snapshot. In the case of Templates I like to note down what kind it is (in this case a clean VM) and when it was last updated.
 
 ![](create_snapshot.gif)
-
 
 ## Finished!
 
