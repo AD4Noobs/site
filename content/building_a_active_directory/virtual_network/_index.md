@@ -8,7 +8,7 @@ pre: "<b>2.1 </b>"
 
 Let's first start with our new Virtual Network. This network will ensure the machines we will be creating are segmented off for your own home network.
 
-In virtualbox go to `File -> Preferences -> Network` and click on the green plus icon. This will add a new virtual network.
+In VirtualBox go to `File -> Preferences -> Network` and click on the green plus icon. This will add a new virtual network.
 Now double click on this new virtual network add update the following settings. Once you are done click on OK twice to close these windows.
 
 | Network Name   | Network CIDR  | Support DHCP | Supports IPv6 |
