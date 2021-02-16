@@ -48,7 +48,7 @@ Objects basically come in two flavours, Container objects Leaf objects:
 - Leaf objects, on the other hand, are just a single things.  
   As an example, users and computers are leaf objects and can't contain other users or computers.
 
-To make this a bit less abstract lets think of these objects and attributes as 'physical' things. 
+To make this a bit less abstract lets think of these objects and attributes as 'physical' things.
 
 #### The Donkeys, Ogre's, Dragons and Castles
 
@@ -117,8 +117,6 @@ Lets say that 'Threepwood's Fine Leather Jackets and Pirate Paraphernalia' wants
 ## Functional Levels
 
 ![](functional_levels.png)
-
-
 
 ## RODC
 
