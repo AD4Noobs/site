@@ -87,13 +87,28 @@ The schema itself is shared between all domains and tree's in forest.
 So whats a Domain ?
 
 The Domain is basically the over al group that contains ALL the objects stored in the Active Directory database.
+
+{{< figure src="domain_tree_forest_01.png" title="This is a singular domain" >}}
+
 Regardless of how big your AD becomes or on how many locations in the world its located, when possible you want use a singular Domain since it simplifies AD management (and security for that mater) a ton.
 
 {{% notice info %}}
-There is this concept called Enhanced Security Administrative Environment (ESEA), also known as a Red Forest which Microsoft released after NotPetya hit the world. If implemented correctly this greatly reduces known attack vectors in AD, but its way to complicated to cover during this stage of the guide and is something to cover during a later date.
+There is this concept called Enhanced Security Administrative Environment (ESEA), also known as a Red Forest which Microsoft released after NotPetya hit the world. If implemented correctly this greatly reduces known attack vectors in AD, but its way to complicated to cover during this stage of the guide.
 {{% /notice %}}
 
-However this sadly inst always possible duo support for other versions Active Directory servers (Functional Levels) or corporate shenanigans.
+However this sadly inst always possible duo support for other versions Active Directory servers (Functional Levels) or corporate shenanigans. 
+
+Lets say that 'Threepwood's Fine Leather Jackets and Pirate Paraphernalia' wants all the Office monkeys inside of their own Domain. Why they would want that ? I have no idea. Lets just settle it under 'corporate shenanigans'.
+
+{{< figure src="domain_tree_forest_02.png" title="2" >}}
+
+{{< figure src="domain_tree_forest_03.png" title="3" >}}
+
+{{< figure src="domain_tree_forest_04.png" title="4" >}}
+
+{{< figure src="domain_tree_forest_05.png" title="5" >}}
+
+{{< figure src="domain_tree_forest_06.png" title="6" >}}
 
 ### Global Catalog
 
