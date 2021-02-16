@@ -6,3 +6,10 @@
   HUGO_VERSION = "0.67.0"
   HUGO_ENV = "production"
   HUGO_ENABLEGITINFO = "true"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
