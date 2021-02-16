@@ -90,7 +90,7 @@ The Domain is basically the over al group that contains ALL the objects stored i
 
 {{< figure src="domain_tree_forest_01.png" title="This is a singular domain" >}}
 
-Regardless of how big your AD becomes or on how many locations in the world its located, when possible, and I can't stress this enough, you want use a singular Domain since it simplifies AD management (and security for that mater) a ton.
+Regardless of how big your AD becomes or on how many locations in the world its located, when possible, and I can't stress this enough, you want use a singular Domain since it simplifies AD management a ton.
 
 {{% notice info %}}
 There is this concept called Enhanced Security Administrative Environment (ESEA), also known as a Red Forest which Microsoft released after NotPetya hit the world. If implemented correctly this greatly reduces known attack vectors in AD, but its way to complicated to cover during this stage of the guide.
