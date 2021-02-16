@@ -13,6 +13,6 @@
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
-    Content-Security-Policy = "default-src 'none'; script-src 'sha256-dv/vjgvEe4HtJO7GbSis1aOc3bOGD2SMMyEjerX7lXc=' 'sha256-sxFvFZHFID7Rcx9HXV3GytOvI/KiWf9Bi8cLBBUPQow=' 'sha256-AbblTqhOzKMw1e59cQ388j4uy5ZTJfr9kHpedczl1MA=' 'sha256-nP0EI9B9ad8IoFUti2q7EQBabcE5MS5v0nkvRfUbYnM=' 'sha256-8ijF6hI3pxIt2sawq7OnA/vXqTkKvQuYuUIo6/6Spgg=' 'sha256-P4Ud3a8nT10UkOkfHX8EZ7Jt9HeIjS3isCHQ5oAreEA='; frame-src www.youtube.com youtube.com;"
+    # Content-Security-Policy = "default-src 'none'; script-src 'sha256-dv/vjgvEe4HtJO7GbSis1aOc3bOGD2SMMyEjerX7lXc=' 'sha256-sxFvFZHFID7Rcx9HXV3GytOvI/KiWf9Bi8cLBBUPQow=' 'sha256-AbblTqhOzKMw1e59cQ388j4uy5ZTJfr9kHpedczl1MA=' 'sha256-nP0EI9B9ad8IoFUti2q7EQBabcE5MS5v0nkvRfUbYnM=' 'sha256-8ijF6hI3pxIt2sawq7OnA/vXqTkKvQuYuUIo6/6Spgg=' 'sha256-P4Ud3a8nT10UkOkfHX8EZ7Jt9HeIjS3isCHQ5oAreEA='; frame-src www.youtube.com youtube.com;"
     Referrer-Policy = "same-origin"
   	Permissions-Policy = "geolocation=(none); midi=(none), sync-xhr=(none), microphone=(none), camera=(none), magnetometer=(none), gyroscope=(none), speaker=(none), vibrate=(none), fullscreen=(none), payment=(none)"   
