@@ -86,7 +86,7 @@ The schema itself is shared between all domains and tree's in forest.
 
 So whats a Domain ?
 
-The Domain is basically the over al group that contains ALL the objects stored in the Active Directory database. A Domain can be hosted on 1 or multiple Domain Controllers.
+The Domain is basically the over al group that contains ALL the objects stored in the Active Directory database. A Domain can be hosted on 1 or multiple Domain Controllers. When using multiple Domain Controllers within 1 domain the changes to the [Active Directory Database (NTDS)](#ntds) are replicated between them.
 
 {{< figure src="domain_tree_forest_01.png" title="This is a singular domain" >}}
 
@@ -135,14 +135,34 @@ A forest can incases multiple domains and trees into 1 structure, but doesn't ha
 
 ![](gc.png)
 
+During the installation process there was this thing called a Global Catalog (GC) that showed up. Any Domain Controller can become a GC and each Domain should have at least 1.
+
+The GC's job is to create an index of objects from domains in the forest. It needs todo this since Domains only know about information from objects inside of their own domain. They don't know about objects from other domains. If they would need to lookup this information the GC helps them with this.  
+
+{{% notice note %}}
+For now thats all you need to know, just remember that a GC and its placement can get more complicated in large complex enterprise environments which require multiple domains, trees and forests.
+{{% /notice %}}
+
 ## Functional Levels
 
+As you might remember from earlier, roles are built in packages into Windows Server. This means that each release of Windows Server might have different version of the included Roles. The AD DS Role is a great example. Over the years with new releases of Windows Server new functionality has been consistently added to AD. This means however that you can run into issues if you where to support these new features while still having old Domain Controllers. This is where Functional Levels jump in. 
+
 ![](functional_levels.png)
+
+Functional Levels determine which version of Windows Server are allowed to host the AD DS role in the domain. During the installation process we use a Domain Functional Level of Server 2016. This means that only we can only create Domain Controllers using at least Windows Server 2016. Any version lower, for example Server 2012R2, will not be able to be promoted to a Domain Controller is this domain.
+
+{{% notice info %}}
+The tech savvy among you probably already thought of a work around. Yes you could create new child domains for the purpose to support older or new versions of AD DS, though it is highly recommended phase out older Windows Servers running Domains Controllers in your domain in favor of newer version of Windows Server. This allows you to most recent functional level and make use of new features, a lot of which have been security focused.
+{{% /notice %}}
 
 ## RODC
 
 ![](gc.png)
 
+RODC are Read-Only Domain Controllers. Though we did not use it, i'd still like to cover it briefly.
+Read-Only Domain Controllers can be used for some specific use cases such as branch offices where you would not want to host a full Domain Controller for security reasons since they could be physically less secure. By default, no AD account passwords are cached on a RODC and the domain does not allow no changes originating from a RODC's AD database, SYSVOL, or DNS.
+
+A Read-Only Domain Controller would allow people in this branch office to still authenticate if, lets say, their VPN connection to the main office went down. [Though if RODCs are not deployed properly, it's possible that the RODC can create a scenario where an attacker could escalate privileges through the RODC up to and including full control of Active Directory.](https://adsecurity.org/?p=3592)
 ## NTDS
 
 ![](ntds.png)
