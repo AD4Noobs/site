@@ -163,10 +163,19 @@ RODC are Read-Only Domain Controllers. Though we did not use it, i'd still like 
 Read-Only Domain Controllers can be used for some specific use cases such as branch offices where you would not want to host a full Domain Controller for security reasons since they could be physically less secure. By default, no AD account passwords are cached on a RODC and the domain does not allow no changes originating from a RODC's AD database, SYSVOL, or DNS.
 
 A Read-Only Domain Controller would allow people in this branch office to still authenticate if, lets say, their VPN connection to the main office went down. [Though if RODCs are not deployed properly, it's possible that the RODC can create a scenario where an attacker could escalate privileges through the RODC up to and including full control of Active Directory.](https://adsecurity.org/?p=3592)
+
 ## NTDS
 
 ![](ntds.png)
 
+NTDS.dit is the file that contains the Active Directory Database. It stores all the information about the Domain of which the current Domain Controller is part of.
+
+{{% notice note %}}
+As an attacker going after AD this is ***THE*** file we want to get our hands on. This file contains every user attribute, including normally protected and hidden attributes such as the users password (hash). After gaining access to this file we are able to start cracking user passwords or even create magic [GoldenTicket](http://blog.gentilkiwi.com/securite/mimikatz/golden-ticket-kerberos).
+{{% /notice %}}
+
 ## SYSVOL
 
 ![](ntds.png)
+
+SYSVOL is a folder that exists on all domain controllers. It a central place to store important Active Directory files. Once of which are group policies, ADMX files (Extra group policies) logon/logoff and startup/shutdown scripts. The File Replication Service or FRS allows the replication of the SYSVOL folder among domain controllers. Logon scripts and policies are delivered to each domain user via SYSVOL. SYSVOL stores all of the security related information of the AD.
