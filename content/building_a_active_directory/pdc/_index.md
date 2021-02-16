@@ -63,7 +63,7 @@ If something in Active Directory or on the Domain Controller breaks, and I mean 
 {{% /notice %}}
 
 {{% notice note %}}
-Fun fact that is not generally known, most public explications on DSRM tell you what I just just explained to you above. If you ask a random IT Administrator what happens to local users when configure a DC they will probably tell you that "All local users are deleted during the promotion process to a Domain Controller", this is actually partially true 😄. What they don't know is that the 'DSRM password' is actually the local administrator user on the Domain Controller and that it can be used for [offensive](https://adsecurity.org/?p=1714) [purposes](https://adsecurity.org/?p=1785), it can be used as backdoor in more ways that it was indented to 👺. By default, the local Administrator is used for DSRM and disabled when the system is not booted into the this DSRM safe mode, unless someone is trying to be sneaky and updates some registry keys to enable this. 
+Fun fact that is not generally known, most public explications on DSRM tell you what I just just explained to you above. If you ask a random IT Administrator what happens to local users when configure a DC they will probably tell you that "All local users are deleted during the promotion process to a Domain Controller", this is actually partially true 😄. What they don't know is that the `DSRM password` is actually the local administrator user on the Domain Controller and that it can be used for [offensive](https://adsecurity.org/?p=1714) [purposes](https://adsecurity.org/?p=1785). It can be used as an backdoor in more ways that it was indented to 👺. By default, the local Administrator is used for DSRM and disabled when the system is not booted into the this DSRM safe mode, unless someone is trying to be sneaky and updates some registry keys to enable this.
 {{% /notice %}}
 
 Just click on Next on the DNS Options page.
@@ -92,6 +92,6 @@ After the server has rebooted you will notice the logon name now includes the Ne
 
 If you open and browse start you will notice that 'Windows Administrative Tools' now includes tools to manage AD.
 
-Congratulations, you just installed your first Active Directory! 🎊
+[Congratulations](https://www.youtube.com/watch?v=oyFQVZ2h0V8), you just installed your first Domain Controller, and thereby Active Directory! 🎊
 
 ![](promote_to_dc_04.gif)

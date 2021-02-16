@@ -14,11 +14,16 @@ Click on the VM and then click on Clone.
 
 Rename the VM to `dc01.ad.tfljpp.test` and ensure `Linked Clone` is selected, then click on Clone.
 
-After cloning right click on the VM and click on settings, then go the network and change the `Attached to' to 'NAT Network`. This should automatically select the newly created VirtualBox Network.
+After cloning right click on the VM and click on settings, then go the network and change the `Attached to` to `NAT Network`. This should automatically select the newly created VirtualBox Network.
 
 ![](pdc_machine.gif)
 
-Now double click on the DC01 to startup the machine. Login and click on yes for the network popup.
+Now double click on the DC01 to startup the machine. Login and click on yes when theres a popup regarding sharing on the network.
+
+{{% notice info %}}
+Under the hood this determents which Windows Firewall Profile is used. Windows Firewall has 3 profiles; Domain, Private and Public. When clicking on Yes you are telling Windows this is a 'somewhat safe network' and thus, by default, allows 'allows in' more traffic that then public profile does. This for example allows devices to discover eachother using Network Discovery. This is why you click 'No' if you ever connect to public wi-fi/hotspots.
+![](network_type.png)
+{{% /notice %}}
 
 ![](boot_and_logon.gif)
 
@@ -46,11 +51,11 @@ Then click on `Ethernet`, choose `Properties`, `Internet Protocol Version 4 (TCP
 | 10.11.12.10 | 255.255.255.0 | 10.11.12.1 | 8.8.8.8 |
 
 {{% notice note %}}
-These settings depend on how you setup the Virtual Network properly according to this guide. To verify what your current network settings; Click on start and search for CMD. Then type ipconfig and press enter,
+These settings depend on how you setup the Virtual Network properly according to this guide. To verify what your current network settings; Click on start and search for CMD. Then type `ipconfig` and press enter.
 {{% /notice %}}
 
 After changing the settings, we can verify if everything is setup correctly by sending a ping to google.nl.
-Click on start and search for CMD. Then type ping google.nl and press enter. It should then ping and reply 4 times.
+Click on start and search for CMD. Then type `ping google.nl` and press enter. It should then ping and reply 4 times.
 
 ![](static_ip.gif)
 
@@ -62,7 +67,7 @@ Currently the server is called something like `WIN-ABCDEG12345`. Not really a na
 In this case since it's the first DC we can call it DC01.
 
 {{% notice note %}}
-In a production environment I'd recommended to prefix this name with a company/domain abbreviation, such as `TFLJPP-DC01`. But for this small lab DC01 is fine.
+In a production environment I'd recommended to prefix this name with a company/domain abbreviation, such as `TFLJPP-DC01`. But for this small lab `DC01` is fine.
 {{% /notice %}}
 
 #### The how
