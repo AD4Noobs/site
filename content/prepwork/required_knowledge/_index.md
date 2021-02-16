@@ -6,7 +6,7 @@ weight: 4
 pre: "<b>0.4 </b>"
 ---
 
-When working with an Active Directory and corporate Windows environment its important to have a basic fundamental understanding of how a internal network functions. Of course the more you know about networking the easier it becomes to understand how something running 'on top of it' works.
+When working with an Active Directory and corporate Windows environment it's important to have a basic fundamental understanding of how a internal network functions. Ofcourse the more you know about networking the easier it becomes to understand how something running 'on top of it' works.
 
 I curated a couple of, relatively speaking, short and condensed videos on these topics. Please watch them in the order below and try to understand what they are explaining. If you feel included to learn more about these topics, please do because there is a lot more to it. This will help you get more out of this guide and help you further in your career if you try to pursuit a job in IT/InfoSec. These are fundamental topics which you probably already make use of on daily basis without even knowing about it.
 
