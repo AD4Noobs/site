@@ -28,7 +28,7 @@ In Active Directory you can logon with 2 usernames, a sAMAccountName (SAM) and a
 
 ### sAMAccountName
 
-sAMAccountNames are denoted in the following format TFLJPP\j.perdok (sAM Prefix\sAMAccountName). When setting up Active Directory the setup will use the internal DNS zone as its sAM Prefix, I'd recommended changing this from the default to something unique for the environment, such as TFLJPP. The reasoning behind this has to do with integration issues I previously ran into with external tooling.
+sAMAccountNames are denoted in the following format TFLJPP\j.perdok (NetBIOS domain name\sAMAccountName). When setting up Active Directory you will be prompted to enter a NetBIOS domain name, I'd recommended setting this to something unique for the environment, such as TFLJPP. The reasoning behind this has to do with integration issues I previously ran into with external tooling.
 
 ### UserPrincipalNames
 
