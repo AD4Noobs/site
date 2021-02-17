@@ -6,4 +6,4 @@ weight: 3
 pre: "<b>2.5.2.3 </b>"
 ---
 
-
+![](create_group_and_add_user.gif)

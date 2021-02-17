@@ -6,3 +6,4 @@ weight: 2
 pre: "<b>2.5.2 </b>"
 ---
 
+![](aduc.gif)

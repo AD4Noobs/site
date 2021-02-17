@@ -6,3 +6,4 @@ weight: 4
 pre: "<b>2.5.2.4 </b>"
 ---
 
+![](computer_object.gif)

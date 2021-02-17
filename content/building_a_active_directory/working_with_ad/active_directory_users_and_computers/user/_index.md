@@ -6,3 +6,6 @@ weight: 2
 pre: "<b>2.5.2.2 </b>"
 ---
 
+![](create_user.gif)
+
+![](user_options_during_creation.png)
