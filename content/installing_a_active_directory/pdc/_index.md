@@ -8,7 +8,7 @@ pre: "<b>2.3 </b>"
 
 ## Features and Roles
 
-Now it is time the first Windows Role gets installed, AD DS. Before installing this Role lets first talk about what Roles and Features are.
+Now it is time to install the first Windows Role, AD DS. Before installing this Role lets first talk about what Roles and Features are.
 
 Windows Roles and Features are basically programs built-in into windows server itself. These Roles and Features can be installed and uninstalled as per your use case. Whether you want a server to be a file server, a print server, or a web server it all starts with installing a Role or Feature.
 
