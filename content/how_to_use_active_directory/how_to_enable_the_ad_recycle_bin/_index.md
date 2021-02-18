@@ -6,7 +6,7 @@ weight: 1
 pre: "<b>4.1 </b>"
 ---
 
-One of the first thing I'd recommend you do any AD is to enable the AD Active Directory Recycle Bin.
+One of the first thing I'd recommend you do in any AD is to enable the AD Active Directory Recycle Bin.
 
 Normally when you remove something from AD it is deleted permanently.
 
