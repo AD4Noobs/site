@@ -8,7 +8,7 @@ pre: "<b>4.2.3.1 </b>"
 
 ### User Information
 
-To create a new user in AD open ADUC, go to the right OU (in our case `TFLJPP-> Users`) and right click on in the main window. 
+So since we work for Mr.Threepwood the first account we are going to create is his. To create a new user in AD open ADUC, go to the right OU (in our case `TFLJPP -> Users`) and right click on in the main window.
 
 This should give you a menu that allows you to select `New >`. This will span a second menu that allows you to create new AD Objects. Here you choose `User`.
 
@@ -25,6 +25,8 @@ The User Logon Name is the User Principal Name (UPN). The Pre-Windows 2000 logon
 Yes even in INSERT_CURRENT_YEAR_NUMBER_HERE there are still software packages out there (and in use by corporations) that don't support the new username format that has been added in the year 2000. 😢
 {{% /notice %}}
 
+As we discussed earlier during the beginning of Chapter 1, in this Domain we are using the user naming schema of `Firstletter.Lastname`. So for the user `Guybrush Threepwood` we are going to use `G.Threepwood` as its logon name.
+
 Once you are done filling out the information you can click on `Next >`.
 
 ### Users Password
@@ -39,18 +41,17 @@ Now you need to set the users password. By default the Domain password requireme
   - Base 10 digits (0 through 9)
   - Non-alphabetic characters (for example, !, $, #, %)
 
-If you try to set a password that does not meet these requirements you will be prompted with a error message.
+If you try to set a password that does not meet these requirements you will be prompted with this error message.
 ![](password_policy.png)
-
 
 {{% notice info %}}
 Yes, banana2021! or Banana2021 is a password that complies with the default password policy. 😢 ![](banana_password.gif)
 {{% /notice %}}
 
-When setting a password you also have the ability to set these 4 options. 
+When setting a password you also have the ability to set these 4 options.
 ![](user_options_during_creation.png)
 
-By default the option 'User must change password at next logon' is enabled. This will ensure that the user needs tp change his password the next time he logs onto a PC. 
+By default the option 'User must change password at next logon' is enabled. This will ensure that the user needs tp change his password the next time he logs onto a PC.
 
 {{% notice note %}}
 This option can give issues with the Remote Desktop Protocol since it does not support this feature.
@@ -63,5 +64,9 @@ Yes a potential workaround to allow users to reset their password using RDP is t
 {{% notice warning %}}
 There is this other option that can used overwrite when a password becomes invalid called 'this password never expires'. You should always avoid enabling this value for ~~end users~~ office monkeys user accounts. Especially if you use the default password policy. You should only ever set this value if you are using strong randomly generated passwords (at least +33 chars) and have a manual process in place to still periodically replace the password, for example, I recommend rotating these kind of passwords at least once or twice a year, but preferably once every quarter.
 {{% /notice %}}
+
+So eum yeah, were where we ? Ow yeah, the users password. Type the desired password twice and disable `User must change password at next logon`. Once your done click on `Next >` and then on `Okay`. This should create the new user account.
+
+Once the account is created you can update other attributes, such as the description. Double click on the user and update the description to `A Mighty Pirate`.
 
 ![](create_user.gif)
