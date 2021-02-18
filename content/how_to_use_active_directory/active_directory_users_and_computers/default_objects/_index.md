@@ -31,7 +31,21 @@ The container 'Builtin' contains 28 groups that created by default when you inst
 ![](builtin.png)
 
 {{% notice warning %}}
-Microsoft's own documentation tells you that these groups are added to ['help control access to shared resources and to delegate specific domain-wide administrative roles'](https://docs.microsoft.com/en-us/windows/security/identity-protection/access-control/active-directory-security-groups#default-security-groups). What they don't tell you (upfront) is that some of these groups actually come with a security risk and thats it against best practices is to actually use these groups. This is because by default these groups give [you access to resources that you might not expect them to](https://adsecurity.org/?p=3700) and can potentially be used by attackers to escalate privileges within your AD. Just search for 'note' on [this](https://docs.microsoft.com/en-us/windows/security/identity-protection/access-control/active-directory-security-groups) page. ![](account_operators.png)
+Microsoft's own documentation tells you that these groups are added to ['help control access to shared resources and to delegate specific domain-wide administrative roles'](https://docs.microsoft.com/en-us/windows/security/identity-protection/access-control/active-directory-security-groups#default-security-groups). What they don't tell you (upfront) is that some of these groups actually come with a security risk and that its against best practices is to actually use these groups. This is because by default these groups give [you access to resources that you might not expect them to](https://adsecurity.org/?p=3700) and can potentially be used by attackers to escalate privileges within your AD. Just search for 'note' on [this](https://docs.microsoft.com/en-us/windows/security/identity-protection/access-control/active-directory-security-groups) page. ![](account_operators.png)
+{{% /notice %}}
+
+### Users
+
+Not quite the order you see in ADUC but theres a reason for that 😉. This OU, weirdly enough if we look at the name, contains default users **and** groups. Again, generally I don't mess with these groups, unless I'm hardening Active Directory.
+
+![](users_ou.png)
+
+By default new users that are added to the Domain will end up in this OU. As you will learn shortly, when you use ADUC you can create a user in any specific OU you want, but there are actually other ways to create a AD user. Examples are the PowerShell command `New-ADUser` or the older NET command `NET USER`. In the case of `NET USER` you [can't choose which OU](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc771865(v=ws.11)) a user is created in.
+
+You can update the default location using a tool called [Redirusr](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc771655(v=ws.11)).
+
+{{% notice info %}}
+The `NET USER` command is often time used by attackers to create a backdoor account and establish some form of persistance in a environment. Meaning if you change the default Users OU to a location where no user should ever be created, you could use this as a indication of 'Something has gone wrong' (indication of potential comprise), especially if this user also gets added to high privileges groups such as Domain Admin. You can even take this a step further and lockdown users that are added to this OU with GPO's, removing default privileges that are normally present for users.
 {{% /notice %}}
 
 ### Computers
@@ -47,16 +61,6 @@ There's also another thing that enforces this, called, `Add workstations to doma
 
 {{% notice warning %}}
 It's not recommended to let users add their own computer to the Domain. Best Practices is to set the `ms-DS-MachineAccountQuota` to `0`. When a user adds a PC to the Domain using it's own account several privileges are added to the computer object, such as a `GenericAll` ACE. You should also not be using a account that has (domain/enterprise) Administrative rights in the Domain. The recommended way is to create a account whose sole purpose is to join Computers to the Domain. This account should not be part of any administative groups and only get specific delegation rights (`Create Computer objects`) on the OU that will be used to house new computers temporally. The computers should be manually moved to the correct OU. This allows you to create a OU that locks down any (potentially) unknown computer that gets added to the Domain in the edge case that this dedicated account gets compromised.
-{{% /notice %}}
-
-### Users
-
-This is the default OU new users added to the Domain will end up. When you use ADUC you can create a user in a spefic OU, but there are acctully other ways to create a AD user. Like the PowerShell command `New-ADUser` or the older NET command `NET USER`. In the case of `NET USER` you [can't choose which OU](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc771865(v=ws.11)) a user is added to.
-
-You can update the default location using a tool called [Redirusr](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc771655(v=ws.11)).
-
-{{% notice info %}}
-The `NET USER` command is often time used by Attackers to create a backdoor account and a stabilise some form of persistance in a environment. Meaning if you change the default Users OU to a location where no user should ever be created you could use this as a indication of 'Something has gone wrong' (indication of potential comprise), especially if this user also gets added to high privileges groups such as Domain Admin. You can even take this a step further and lockdown users that are added to this OU with GPO's, removing default privileges that are normally present for users.
 {{% /notice %}}
 
 ### Domain Controllers

@@ -2,8 +2,8 @@
 title: "Organizational Unit"
 date: 2021-02-17T14:54:19+01:00
 draft: false
-weight: 1
-pre: "<b>4.2.1 </b>"
+weight: 2
+pre: "<b>4.2.2 </b>"
 ---
 
 Lets us start with creating our first OU. I recommend that for any AD environment you create you start with 1 OU that houses all the objects you are going to create. I usually use a abbreviation of the company name, most lickely the same one I used for the NetBIOS domain name (**TFLJPP**\username).
