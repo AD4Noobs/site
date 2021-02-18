@@ -8,20 +8,20 @@ pre: "<b>2.2 </b>"
 
 ## Prepare Windows Server
 
-Before we can install the AD role, we need make sure that the windows VM is setup correctly. Let's first create a new linked clone from the Server 2019 Template.
+Before we can install the AD role, we need make sure that the windows VM is setup correctly. Let us first create a new linked clone from the Server 2019 Template.
 
 Click on the VM and then click on Clone.
 
 Rename the VM to `dc01.ad.tfljpp.test` and ensure `Linked Clone` is selected, then click on Clone.
 
-After cloning right click on the VM and click on settings, then go the network and change the `Attached to` to `NAT Network`. This should automatically select the newly created VirtualBox Network.
+After cloning, right click on the VM and click on settings, then go the network and change the `Attached to` to `NAT Network`. This should automatically select the newly created VirtualBox Network.
 
 ![](pdc_machine.gif)
 
-Now double click on the DC01 to startup the machine. Login and click on yes when theres a popup regarding sharing on the network.
+Now double click on the DC01 to startup the machine. Login and click on yes when there's a popup regarding sharing on the network.
 
 {{% notice info %}}
-Under the hood this determents which Windows Firewall Profile is used. Windows Firewall has 3 profiles; Domain, Private and Public. When clicking on Yes you are telling Windows this is a 'somewhat safe network' and thus, by default, allows 'allows in' more traffic that then public profile does. This for example allows devices to discover eachother using Network Discovery. This is why you click 'No' if you ever connect to public wi-fi/hotspots.
+Under the hood this determines which Windows Firewall Profile is used. Windows Firewall has 3 profiles; Domain, Private and Public. When clicking on Yes you are telling Windows this is a 'somewhat safe network' and thus, by default, allows 'allows in' more traffic that then public profile does. This for example allows devices to discover each other using Network Discovery. This is why you click 'No' if you ever connect to public wi-fi/hotspots.
 ![](network_type.png)
 {{% /notice %}}
 
@@ -29,7 +29,7 @@ Under the hood this determents which Windows Firewall Profile is used. Windows F
 
 ### Setting a static IP address
 
-Normally in a network the DHCP server gives out IP addresses to clients. This is fine for clients that don't host any 'things', but not so much for servers.
+Normally in a network the DHCP server gives out IP addresses to clients. This is fine for clients that do not host any 'things', but not so much for servers.
 
 Let's say for example if we decided to use DHCP for the Domain Controller (DC). If DHCP decides to release the assigned IP address that the DC is currently using and grant it a new one it will completely break AD.
 
@@ -63,11 +63,11 @@ Click on start and search for CMD. Then type `ping google.nl` and press enter. I
 
 #### The Why
 
-Currently the server is called something like `WIN-ABCDEG12345`. Not really a name indicating what the purpose of this server is now does it right? This is fine if you have 2 or 3 servers, but once you are part of a large IT team and have over 100 servers this can get quite confusing. Therefore its important to rename servers to a name that clearly defines their function.
-In this case since it's the first DC we can call it DC01.
+Currently the server is called something like `WIN-ABCDEG12345`. Not really a name indicating what the purpose of this server is now does it right? This is fine if you have 2 or 3 servers, but once you are part of a large IT team and have over 100 servers this can get quite confusing. Therefore, it's important to rename servers to a name that clearly defines their function.
+In this case since it is the first DC we can call it DC01.
 
 {{% notice note %}}
-In a production environment I'd recommended to prefix this name with a company/domain abbreviation, such as `TFLJPP-DC01`. But for this small lab `DC01` is fine.
+In a production environment I recommended to prefix this name with a company/domain abbreviation, such as `TFLJPP-DC01`. But for this small lab `DC01` is fine.
 {{% /notice %}}
 
 #### The how
