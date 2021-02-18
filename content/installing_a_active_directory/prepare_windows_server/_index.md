@@ -67,7 +67,7 @@ Currently the server is called something like `WIN-ABCDEG12345`. Not really a na
 In this case since it is the first DC we can call it DC01.
 
 {{% notice note %}}
-In a production environment I had recommended to prefix this name with a company/domain abbreviation, such as `TFLJPP-DC01`. But for this small lab `DC01` is fine.
+In a production environment I recommended to prefix this name with a company/domain abbreviation, such as `TFLJPP-DC01`. But for this small lab `DC01` is fine.
 {{% /notice %}}
 
 #### The how
