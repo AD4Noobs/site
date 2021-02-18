@@ -21,7 +21,7 @@ After cloning, right click on the VM and click on settings, then go the network 
 Now double click on the DC01 to startup the machine. Login and click on yes when there's a popup regarding sharing on the network.
 
 {{% notice info %}}
-Under the hood this determent which Windows Firewall Profile is used. Windows Firewall has 3 profiles; Domain, Private and Public. When clicking on Yes you are telling Windows this is a 'somewhat safe network' and thus, by default, allows 'allows in' more traffic that then public profile does. This for example allows devices to discover each other using Network Discovery. This is why you click 'No' if you ever connect to public wi-fi/hotspots.
+Under the hood this determines which Windows Firewall Profile is used. Windows Firewall has 3 profiles; Domain, Private and Public. When clicking on Yes you are telling Windows this is a 'somewhat safe network' and thus, by default, allows 'allows in' more traffic that then public profile does. This for example allows devices to discover each other using Network Discovery. This is why you click 'No' if you ever connect to public wi-fi/hotspots.
 ![](network_type.png)
 {{% /notice %}}
 
