@@ -6,16 +6,16 @@ weight: 1
 pre: "<b>4.1 </b>"
 ---
 
-One of the first thing I'd recommend you do any any AD is to enable the AD Active Directory Recycle Bin.
+One of the first thing I'd recommend you do any AD is to enable the AD Active Directory Recycle Bin.
 
-Normally when you remove something from AD its deleted permanently.
+Normally when you remove something from AD it is deleted permanently.
 
 Now imagine you work at a Helpdesk. It's early in the morning a you receive a Ticket from a manager asking you to remove a user named F.Shinetop. Duo the lack of your daily dose caffeine combined with a last night all night gaming session you accidentally remove the user V.Shinetop. In this scenario, without AD Recycle Bin, there is no way easy to restore the original user V.Shinetop to its former state without knowing everything that was configured for this account.
 
-To avoid these awkward moments you should enable the AD Recycle Bin. This is a thing that takes seconds to activate but can save you hours of work.
+To avoid these awkward moments, you should enable the AD Recycle Bin. This is a thing that takes seconds to activate but can save you hours of work.
 
 {{% notice info %}}
-By default a object that has been deleted can be restored within 180 days. This is controled by the `tombstoneLifetime` and  `msDS-deletedObjectLifetime` attributes. When the `msDS-deletedObjectLifetime` attribute is not set the value from the `tombstoneLifetime` attribute is used.
+By default a object that has been deleted can be restored within 180 days. This is controlled by the `tombstoneLifetime` and  `msDS-deletedObjectLifetime` attributes. When the `msDS-deletedObjectLifetime` attribute is not set the value from the `tombstoneLifetime` attribute is used.
 ![](lifetime.png)
 {{% /notice %}}
 
