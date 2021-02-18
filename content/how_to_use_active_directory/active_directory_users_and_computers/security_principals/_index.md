@@ -10,6 +10,8 @@ pre: "<b>4.2.3 </b>"
 
 Security Principals are types of objects that can be used to gain access to something. To do this Security Prinicpal needs to be able authenticate against the Operating System. The OS then does an Access Control checks to see if this Security Prinicpal has access to the requested resource. It then either allows or denies it access. Security Principals are not just used in Active Directory, but even by standalone version of Windows. To keep track of Security Prinicpals each are assigned a unique security identifier (SID).
 
+A couple of Security Prinicpal you will often work with in Active Directory are Users Accounts, Groups and Computer Accounts.
+
 {{% notice note %}}
 If you ever see a string that starts with `S-1-5-21` you know its a SID. ![](sid.png)
 {{% /notice %}}

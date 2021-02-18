@@ -1,5 +1,5 @@
 ---
-title: "Group"
+title: "Groups"
 date: 2021-02-17T14:54:28+01:00
 draft: false
 weight: 4
