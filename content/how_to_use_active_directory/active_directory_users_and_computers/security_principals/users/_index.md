@@ -35,7 +35,7 @@ Now you need to set the users password. By default the Domain password requireme
 
 - The password should not contain the user’s account name or parts of the user’s full name that exceed two consecutive characters
 - The password should at least be six characters in length
-- The password should contain characters from *atleast* three of the following four categories:
+- The password should contain characters from _atleast_ three of the following four categories:
   - uppercase characters (A through Z)
   - lowercase characters (a through z)
   - Base 10 digits (0 through 9)
@@ -70,3 +70,29 @@ So eum yeah, were where we ? Ow yeah, the users password. Type the desired passw
 Once the account is created you can update other attributes, such as the description. Double click on the user and update the description to `A Mighty Pirate`.
 
 ![](create_user.gif)
+
+### Naming convention
+
+Generally in Active Directory you won't only have 'normal user accounts', meaning accounts that are used by a singular living person. Most likely there all all sorts of different account types.
+
+To ensure clear distinctions between them I always implement a strict naming convection for my groups in production environments for 'non normal user accounts'
+
+General rules I follow with the naming convention:
+
+- Always replace spaces with underscores (`_`).
+- Always use lowercase.
+- Never use special characters except `_`
+- If the name is longer then max of 63 characters I abbreviate things where I see fit.
+- I don't enforce these rules on normal personal user accounts.
+
+I generally use the following prefixes:
+
+| prefix_name                | What its used for                                                                                                                                                                        | Example                                         |
+| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| svc_name                   | A Service account. A account that is in use by a service on a external product.                                                                                                          | `svc_palo_alto_user_id`, `svc_sql01_database01` |
+| ext_companyname_personname | A account used by a external entity, such as a supplier. Limited to a single user.                                                                                                       | `ext_bigwhoop_l_chuck`                          |
+| adm_tier_name              | A account with administrative rights in the domain. Tier refers to system classifications (L0 = important/buisness critical servers, L1 = other/application servers, L2 = workstations ) | `admin_l0_g_threepwood`                         |
+
+I also create separate OU's for each user prefix and ensure that the description explains their function.
+
+![](naming_conv.png)
