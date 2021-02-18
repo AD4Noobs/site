@@ -10,8 +10,8 @@ pre: "<b>3.4 </b>"
 
 During the installation process there was this thing called a Global Catalog (GC) that showed up.
 
-The GC's job is to create an index of all objects from all the domains in the forest. This is needed because Domain Controllers only store information about objects from inside of their own Domain. They don't know anything about objects from other Domains. If they would need to lookup information from a object outside of their own Domain they would ask the GC for help. Any Domain Controller in a Domain can become a GC and each Domain should have at least 1 of them.
+The GC's job is to create an index of all objects from all the domains in the forest. This is needed because Domain Controllers only store information about objects from inside of their own Domain. They do not know anything about objects from other Domains. If they would need to lookup information from an object outside of their own Domain they would ask the GC for help. Any Domain Controller in a Domain can become a GC and each Domain should have at least 1 of them.
 
 {{% notice note %}}
-For now thats all you need to know, just remember that a GC and its placement can get more complicated in large complex enterprise environments which require multiple domains, trees and forests.
+For now, that's all you need to know, just remember that a GC and its placement can get more complicated in large complex enterprise environments which require multiple domains, trees and forests.
 {{% /notice %}}
