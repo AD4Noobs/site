@@ -13,5 +13,5 @@ pre: "<b>3.7 </b>"
 NTDS is the file that contains the Active Directory Database. It stores all the information about the Domain of which the current Domain Controller is part of.
 
 {{% notice note %}}
-As an attacker going after AD this is **the** file we want to get our hands on. This file contains every user attribute, including normally protected and hidden attributes such as the users password (hash). After gaining access to this file we are able to start cracking user passwords, create magic a [GoldenTicket](http://blog.gentilkiwi.com/securite/mimikatz/golden-ticket-kerberos) and do other 'fun' stuff.
+As an attacker going after AD this is **the** file we want to get our hands on. This file contains every user attribute, including normally protected and hidden attributes such as the user's password (hash). After gaining access to this file, we are able to start cracking user passwords, create magic a [GoldenTicket](http://blog.gentilkiwi.com/securite/mimikatz/golden-ticket-kerberos) and do other 'fun' stuff.
 {{% /notice %}}
