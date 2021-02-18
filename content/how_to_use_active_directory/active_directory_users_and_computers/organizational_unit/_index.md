@@ -6,19 +6,14 @@ weight: 1
 pre: "<b>4.2.1 </b>"
 ---
 
-When you first open your Domain in ADUC you will be greeted with a couple of default objects.
+Lets us start with creating our first OU. I recommend that for any AD environment you create you start with 1 OU that houses all the objects you are going to create. I usually use a abbreviation of the company name, most lickely the same one I used for the NetBIOS domain name (**TFLJPP**\username).
 
-{{< figure src="overview.png" title="Default Objects">}}
+To create an OU open ADUC, click on your FQDN and then right click in the main window.
 
-As you might notice some of these have the type 'Container' while others have the type 'Organizational Unit' (OU's), even though they almost look the same and they all have the description 'Default container for...' they are different things. As is with most things in the '[Microsoft World](https://www.youtube.com/watch?v=UQvm5_OweF8)', whenever this is the case it most likely has to do with backswords compatibility.
+This should give you a menu that allows you to select `New >`. This will span a second menu that allows you to create new AD Objects. Here you choose 'Organizational Unit'.
 
-In this case the 'Containers' are generic Active Directory containers. Both OU's and Containers have the ability to house other objects, such as users and computers, and are thus considered Container Objects (instead of Leaf objects). The main difference between Containers and OU's is that Containers can't be used with  Group Policy Object (GPO's) or delegation.
+Now give this OU a name, in this case `TFLJPP` and click on OK (or if you are lazy, press Enter).
 
-Well what are GPO's you might ask ? Well that is a topic we need to tackle on it owns. To give a really basic explanation, GPO's allow administrators to configure settings and preferences for users and computers, like setting a default home page in a webbrowser. Pretty much any modern AD environment uses GPO's in some form.
-
-{{% notice info %}}
-**TL:DR** Containers are Old. Organizational Units are new. Both can house other objects. You want to use OU's because they work with GPO's.
-{{% /notice %}}
-
+Now open this newly created OU and create 3 more OU's. `Users`, `Computers` and `Groups`.
 
 ![](create_ou.gif)
