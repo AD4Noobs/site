@@ -2,7 +2,7 @@
 title: "Planned Content"
 date: 2021-02-17T14:55:18+01:00
 draft: false
-weight: 6
+weight: 100
 ---
 
 Sadly I could not create detailed content for everything I wanted in the allocated time I had. 
