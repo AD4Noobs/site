@@ -47,7 +47,7 @@ Create the following users in the OU:
 
 ## GPO Challenges
 
-Group Policy Objects allow you to customize the environment. Below are some challanges for you to try.
+Group Policy Objects allow you to customize the environment. Below are some challenges for you to try.
 
 ### Change the internet explorer home page for all the users (Easy)
 
@@ -62,7 +62,7 @@ Group Policy Objects allow you to customize the environment. Below are some chal
 ### Change users internet home page for a group (Hard)
 
 - Create a GPO changes the Internet Explorer home page to scummbar.com and apply it to the user OU but also ensure its only applied to users who are part of the `mighty pirates` 
-{{%expand "Tip" %}} Deny `Apply group policy` for `Authenticated Users`, don`t remove it; Try googling `GPO conflicts`{{% /expand%}}
+{{%expand "Tip" %}} Deny `Apply group policy` for `Authenticated Users`, don`t remove it; Try Googling `GPO conflicts`{{% /expand%}}
 
 ### Deploy a new Password and Lockout Policy (Hard)
 
@@ -73,20 +73,20 @@ Group Policy Objects allow you to customize the environment. Below are some chal
     - Password History: 24 passwords remembered
     - Max password age: 42 days
     - Min password age: 1 days
-    - Min password lenght: 9
-    - Password must meet complexity requirments: true
+    - Min password length: 9
+    - Password must meet complexity requirements: true
     - Store password using reversible encryption: false
 - Create a new GPO called `[SECURITY] - Account lockout (Computer Policy)` that enforces the following Lockout Policy.
     - Account lockout threshold : 5 invalid login attempts
     - Account lockout duration : 30 Min
     - Reset account lockout after: 30 Min
-- Link the `[SECURITY] - Account lockout (Computer Policy)` and `[SECURITY] - Password Policy (Computer Policy)` GPOs in the same place as the `Default Domain Policy`.
+- Link the `[SECURITY] - Account lockout (Computer Policy)` and `[SECURITY] - Password Policy (Computer Policy)` GPO's in the same place as the `Default Domain Policy`.
 - Edit the original `Default Domain Policy` and disable the following settings:
     - Password History
     - Max password age
     - Min password age
-    - Min password lenght
-    - Password must meet complexity requirments
+    - Min password length
+    - Password must meet complexity requirements
     - Store password using reversible encryption
 - Create proof that this was applied.
     {{%expand "Tip" %}}  `gpupdate & gpresult` {{% /expand%}}

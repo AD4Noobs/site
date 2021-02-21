@@ -6,15 +6,15 @@ weight: 5
 pre: "<b>4.2.3.3 </b>"
 ---
 
-We have yet to add a computer to our domain, but since a computer is also a security principal I like to shortly cover it here.
+We haven't yet added a computer to our domain, since a computer is also a security principal I like to shortly cover it here.
 
 {{% notice note %}}
-A generally unknown fact. in AD computer accounts are just like user accounts. This is because if you do something in the context of a computer object AD see this as a 'Authenticated User' duo it being a security principal. They are generally able to preform the same actions a default user can do, such as add more computers to the domain and read/update AD object attributes. This can be handy feature for attackers.
+A generally unknown fact, in AD, computer accounts are just like user accounts. This is because if you do something in the context of a computer object, AD sees this as a 'Authenticated User' due it being a security principal. They are generally able to perform the same actions a default user can do, such as add more computers to the domain and read/update AD object attributes. This can be handy feature for attackers.
 {{% /notice %}}
 
 ### Naming convention
 
-I always implement a strict naming convection for my computers in any environments. These naming conventions are not the same at every company, but I think they all should have one.
+I always implement a strict naming convection for my computers in any environment. These naming conventions are not the same at every company, but I think they all should have one.
 
 General rules I follow with the naming convention for computers:
 
