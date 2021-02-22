@@ -6,7 +6,7 @@ weight: 2
 pre: "<b>4.2.2 </b>"
 ---
 
-Lets us start with creating our first OU. I recommend that for any AD environment you create you start with 1 OU that houses all the objects you are going to create. I usually use a abbreviation of the company name, most lickely the same one I used for the NetBIOS domain name (**TFLJPP**\username).
+Let's start with creating our first OU. I recommend, that for any AD environment you create, you start with 1 OU that houses all the objects you are going to create. I usually use a abbreviation of the company name, most likely the same one I used for the NetBIOS domain name (**TFLJPP**\username).
 
 To create an OU open ADUC, click on your FQDN and then right click in the main window.
 
@@ -37,9 +37,9 @@ Now if you open this OU and look at its properties this option is no where to be
 In ADUC go to `View -> Advanced Features`.
 
 {{% notice info %}}
-Remember when I talked about the Default Objects ? There are actually a bunch more. Since you just enabled `Advanced Features` you are now able to view these. For now you can just ignore them. It's not important to cover them right now. But as an example, NTDS Qoutas allows you to implement qouta's for object creation which you can apply to administrators accounts and LostAndFound is used for when a objects becomes orphaned which can happen if multiple people preform maintenance in Active Directory.
+Remember when I talked about the Default Objects? There are actually a bunch more. Since you just enabled `Advanced Features` you are now able to view these. For now you can just ignore them. It's not important to cover them right now. But as an example, NTDS Quotas allows you to implement quota's for object creation which you can apply to administrators accounts and LostAndFound is used for when a objects becomes orphaned which can happen if multiple people perform maintenance in Active Directory.
 {{% /notice %}}
 
-Now go back the OU and right click on it choose properties. You will now have a couple of more tabs on the top. If you open the `Object`-tab you will see there theres a option to disable the protection from accidental deletion.
+Now go back the OU and right click on it, choose properties. You will now have a couple more tabs on the top. If you open the `Object`-tab you will see there is a option to disable the protection from accidental deletion.
 
 ![](delete_ou.gif)

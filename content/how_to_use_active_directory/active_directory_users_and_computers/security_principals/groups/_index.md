@@ -8,7 +8,7 @@ pre: "<b>4.2.3.2 </b>"
 
 ## Create a new Group
 
-Now that we have a User lets create a group to place it in. Create a OU for groups if you haven't already and open it. Right click in the main window. This should give you a menu that allows you to select `New >`. This will span a second menu that allows you to create new AD Objects. Here you choose `Group`. Now enter the group name `Mighty Pirates` and press `OK`.
+Now that we have a user lets create a group to place it in. Create a OU for groups if you haven't already and open it. Right click in the main window. This should give you a menu that allows you to select `New >`. This will span a second menu that allows you to create new AD Objects. Here you choose `Group`. Now enter the group name `Mighty Pirates` and press `OK`.
 
 Now double click on the group and click on the `Members`-tab. Here you can add other objects to this group. Click on Add, type `Guy` and click on `Check names`. This should autocomplete to the user `G.Threepwood@ad.tfljpp.test`, then click on `OK`.
 
@@ -39,22 +39,21 @@ When users are added to a Global Group they automatically get all the rights the
 
 {{< figure src="syntax-groups.jpeg" title="Source: https://ss64.com/nt/syntax-groups.html" >}}
 
-like I said, there is no technical limitation that beholds you to this structure, but, when implemented correctly this simplifies AD management a lot. Just look the 2 examples below.
+Like I said, there are no technical limitations that behold you to this structure. But when implemented correctly this simplifies AD management a lot. Just look the 2 examples below.
 
 {{< figure src="syntax-groups-nested.jpeg" title="Source: https://ss64.com/nt/syntax-groups.html" >}}
 
-Yes. This might be a lot more work for the initial setup, and yes, it might seem convoluted at first when you are starting out.
+Yes, this might be a lot more work for the initial setup, and yes, it might seem convoluted at first when you are starting out.
 
-To setup something, like for example file permissions, you could just create a Global Group, add users to it, and give it rights directly somewhere. But trust me, this will eventually bite you in the ass. Using the structure I explained above will save you a ton of work in the long wrong; Fixing issues other people created, awkward phone calls with clients why someone suddenly had more permissions then they needed and general waiting around.
+To setup something, like for example file permissions, you could just create a Global Group, add users to it, and give it rights directly somewhere. But trust me, this will eventually bite you in the ass. Using the structure I explained above will save you a ton of work. Wrong; Fixing issues other people created, awkward phone calls with clients why someone suddenly had more permissions then they needed and general waiting around.
 
 {{% notice info %}}
-You should also **NEVER** directly add a user to a resource, for example a network share, in a production environment. Always work with groups to give out permissions. ![](direct_access.png) ![](group_access.png)
+You should also **NEVER** directly add a user to a resource, for example a network share in a production environment. Always work with groups to give out permissions. ![](direct_access.png) ![](group_access.png)
 {{% /notice %}}
 
 ### Group Type
 
 - Security groups:
-
   - Security groups are used to control access to resources.
   - Security groups can also be used as email distribution lists.
 
@@ -64,13 +63,13 @@ You should also **NEVER** directly add a user to a resource, for example a netwo
 
 ### Description
 
-Whenever you create a group I recommend you give this group a description explaining what it does. This will help you (and your colleges) remember and understand what this group is used for.
+Whenever you create a group, I recommend you give this group a description explaining what it does. This will help you (and your colleagues) remember and understand what this group is used for.
 
 ![](group_desc.png)
 
 ### Naming convention
 
-To take it even 1 step further I always implement a strict naming convection for my groups in production environments. These naming conventions are not the same at every company, but I think they all should have one.
+To take it even 1 step further, I always implement a strict naming convection for my groups in production environments. These naming conventions are not the same at every company, but I think they all should have one.
 
 General rules I follow with the naming convention:
 
