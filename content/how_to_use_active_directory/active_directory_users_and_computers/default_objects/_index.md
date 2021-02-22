@@ -77,7 +77,7 @@ Managed Service Accounts (MSA) and Group Managed Service Accounts (gMSA) are gre
 Basically a MSA is a type of account that can be used as Service Account. Service Accounts are accounts designed to run services, such as a SQL database.
 There is nothing special about that, the magic sauce is that these accounts have automagically rotating and strong passwords.
 
-Traditionally service accounts need high privileges in a Domain. What I usually see in Customer environments is that somebody in 2008 created a new account using a very weak and simple password, like `Welkom01!`, and configured this account to run a SQL database. With privileges of for example an Domain Admin.
+Traditionally service accounts need high privileges in a Domain. What I usually see in Customer environments is that somebody in 2008 created a new account using a very weak and simple password, like `Welkom01!`, and configured this account to run a SQL database. While doing so they added this account to a high privilege group, for example Domain Admin.
 
 Since changing the password of that user will break the SQL database (unless the service running the database is manually updated to use the new password) this password gets rarely, if ever, changed. Using some methods that are currently to complicated to explain (for example [kerberoasting](https://adsecurity.org/?tag=kerberoast)), we as an attacker are able to request a password hash and try to crack this passwordhash. As you can might imagine, `Welkom01!` is pretty easy hash to crack.
 
