@@ -40,7 +40,7 @@ Click on start and search for CMD. Then type `ping dc01.ad.tfljpp.test` and pres
 
 Now that we have a static IP and setup our DNS correctly we can add this machine to the domain.
 
-Open the file explorer and right click on `This PC` and choose `Properties`. Then click on `Change Settings` and `Change`. Here you can select `Domain` and enter the correct domain. This is our root domain `ad.tfljpp.test`. After pressing enter you will be prompted to enter credentials. Login using the Administrator account.
+Open the file explorer and click on `This PC`. Now click anywhere in the white space to the right and choose `Properties`. Then click on `Change Settings` and `Change`. Here you can select `Domain` and enter the correct domain. This is our root domain `ad.tfljpp.test`. After pressing enter you will be prompted to enter credentials. Login using the Administrator account.
 
 {{% notice warning %}}
 During this part of the guide we will be using the Domain Administrator to add a computer to the domain and login to the computer. You should **NEVER** do this in a production environment. You should have dedicated Tiered and Hardened Admin accounts to logon to workstations. You should also use a lockeddown and dedicated account to add computers to the Domain. At this point where still explaining the basics of AD, so we haven't configured this yet (and shown why this is important).
