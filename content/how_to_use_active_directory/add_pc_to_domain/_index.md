@@ -16,7 +16,7 @@ After cloning, right click on the VM and click on settings, then go the network 
 
 Like we did before, we need to change the computer name and set a static IP.
 
-Open the file explorer and right click on `This PC` and choose `Properties`. Then click on `Change Settings` and `Change`. Here you can update the computer name to PC01. Now click on Ok twice and close. You will then be prompted to reboot the workstation.
+Open the file explorer and click on `This PC`. Now click anywhere in the white space to the right and choose `Properties`. Then click on `Change Settings` and `Change`. Here you can update the computer name to PC01. Now click on Ok twice and close. You will then be prompted to reboot the workstation.
 
 ![](rename_pc.gif)
 
