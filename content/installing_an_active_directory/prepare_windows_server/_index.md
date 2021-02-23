@@ -20,7 +20,21 @@ After cloning, right click on the VM and click on settings, then go the network 
 
 ![](pdc_machine_network.gif)
 
-Now double click on the DC01 to startup the machine. Login and click on yes when there's a popup regarding sharing on the network.
+Now double click on the DC01 to startup the machine. Since we sysprep'ed our template this initial boot will take longer then normal.
+
+![](sysprep_01.gif)
+
+After the machine boots you will be prompted to select your region, preferred language and keyboard layout. Keep everything in default and click on Next.  
+Now you will be prompted to read the license agreement. Click Accept.  
+Now you are asked to enter the password for the user Administrator. Use `Password01!`.  
+
+{{% notice warning %}}
+I'll stop staying this when I stop seeing them; Don't use these kind of simple passwords in production environments.
+{{% /notice %}}
+
+![](sysprep_02.gif)
+
+Login and click on yes when there's a popup regarding sharing on the network.
 
 {{% notice info %}}
 Under the hood this determines which Windows Firewall Profile is used. Windows Firewall has 3 profiles; Domain, Private and Public. When clicking on Yes you are telling Windows this is a 'somewhat safe network' and thus, by default, allows 'allows in' more traffic that then public profile does. This for example allows devices to discover each other using Network Discovery. This is why you click 'No' if you ever connect to public wi-fi/hotspots.
