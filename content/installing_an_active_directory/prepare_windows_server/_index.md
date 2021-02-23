@@ -12,11 +12,13 @@ Before we can install the AD role, we need make sure that the windows VM is setu
 
 Click on the VM and then click on Clone.
 
-Rename the VM to `dc01.ad.tfljpp.test` and ensure `Linked Clone` is selected, then click on Clone.
+Rename the VM to `dc01.ad.tfljpp.test` and ensure `Linked Clone` is selected. Now change the MAC Address Policy to `Generate new MAC addresses for all network adapters`, then click on Clone.
+
+![](pdc_machine.gif)
 
 After cloning, right click on the VM and click on settings, then go the network and change the `Attached to` to `NAT Network`. This should automatically select the newly created VirtualBox Network.
 
-![](pdc_machine.gif)
+![](pdc_machine_network.gif)
 
 Now double click on the DC01 to startup the machine. Login and click on yes when there's a popup regarding sharing on the network.
 
