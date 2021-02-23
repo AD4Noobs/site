@@ -2,10 +2,11 @@
 title: "Security Descriptors"
 date: 2021-02-23T10:31:51+01:00
 draft: false
+weight: 1
 pre: "<b>5.1 </b>"
 ---
 
-Remember when we covered `Security Principals` ? You know, things that can authenticate, for example a user account, and has SID's (the thing that starts with `S-1-5-21`). There we briefly explained that "something", for example a file share, can be protected. In order to access this you first needed to authenticate to proof you you are. Then you needed to be part of a specific group. In that example the specific group was added to the `Security Descriptor` in order to actually grant you the needed rights.
+Before we start some much needed terminology. Remember when we covered `Security Principals` ? You know, things that can authenticate, for example a user account, and has SID's (the thing that starts with `S-1-5-21`). There we briefly explained that "something", for example a file share, can be protected. In order to access this you first needed to authenticate to proof you you are. Then you needed to be part of a specific group. In that example the specific group was added to the `Security Descriptor` in order to actually grant you the needed rights.
 
 As it was with `Security Principals`, `Security Descriptors` are also heavily part of the Windows Operating system. They also happened to be used for Active Directory.
 
