@@ -8,20 +8,23 @@ pre: "<b>5.2 </b>"
 
 By now you should know how to deploy a VM using the templates and add it to the Domain so I won't explain it again in full details.
 
-Do the following:
-- Create a new Server 2019 VM named fs01.ad.tfljpp.test.
-  - Ensure you update the network to our custom NAT Network
-- Rename the Server to FS01
-- Give the the following network configuration
+### Do the following
 
-| What    | value         |
-| ------- | ------------- |
-| IP      | 10.11.12.50   |
-| Mask    | 255.255.255.0 |
-| Gateway | 10.11.12.1    |
-| DNS     | 10.11.12.10   |
+- Create a new Server 2019 VM named `fs01.ad.tfljpp.test`
+  - Ensure you update the network to our custom NAT Network
+- Boot the VM and run through the initial configuration
+  - Rename the Server to `FS01`
+  - Give the the following network configuration
+
+| What    | value           |
+| ------- | --------------- |
+| IP      | `10.11.12.50`   |
+| Mask    | `255.255.255.0` |
+| Gateway | `10.11.12.1`    |
+| DNS     | `10.11.12.10`   |
 
 - Add server to the domain.
-- Create a Servers OU
-  - Create a FS OU
-  - Place the computer object in the `TFLJPP\Servers\FS` OU.
+- Login on `DC01`
+  - Create a `Servers` OU
+    - Create a `FS` OU inside of the `Servers` OU
+  - Move the computer object from the default OU to the `TFLJPP\Servers\FS` OU.
