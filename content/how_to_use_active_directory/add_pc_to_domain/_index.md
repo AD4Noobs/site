@@ -16,11 +16,24 @@ After cloning, right click on the VM and click on settings, then go the network 
 
 ![](create_new_pc_network.gif)
 
-Like we did before, we need to change the computer name and set a static IP.
+Since we syspred out template we need to run through the initial configuration once again, use the same settings we used during the template creation.
+
+Do note that since we can't add the same (local) twice we use `admin` here instead. The password you should use is `Password01!`.
+
+{{% notice warning %}}
+Again, please don't use passwords like this in production.
+{{% /notice %}}
+
+![](sysprep2.gif)
+
+Once Windows finishes setting up, can start with changing the computer name and setting up a static IP.
+### Rename PC
 
 Open the file explorer and click on `This PC`. Now click anywhere in the white space to the right and choose `Properties`. Then click on `Change Settings` and `Change`. Here you can update the computer name to PC01. Now click on Ok twice and close. You will then be prompted to reboot the workstation.
 
 ![](rename_pc.gif)
+
+### Set static IP and correct DNS
 
 Open the file explorer and right click on `Network` and choose `Properties`.
 Then click on `Ethernet`, choose `Properties`, `Internet Protocol Version 4 (TCP/IPv4)` and enter the following information.
@@ -30,15 +43,19 @@ Then click on `Ethernet`, choose `Properties`, `Internet Protocol Version 4 (TCP
 | 10.11.12.100 | 255.255.255.0 | 10.11.12.1 | 10.11.12.10 |
 
 {{% notice note %}}
-These settings depend on how you setup the Virtual Network properly according to this guide. To verify what your current network settings; Click on start and search for CMD. Then type `ipconfig` and press enter.
+These settings depend on how you setup the Virtual Network properly according to this guide. To verify what your current network settings; Click on start and search for CMD and press enter. Then type `ipconfig` and press enter.
 {{% /notice %}}
 
 ![](network_settings.gif)
+
+### Test network settings
 
 After changing the settings, we can verify if everything is setup correctly by sending a ping to `dc01.ad.tfljpp.test`.
 Click on start and search for CMD. Then type `ping dc01.ad.tfljpp.test` and press enter. It should then ping and reply 4 times.
 
 ![](test_network_settings.gif)
+
+### Add the PC to the Domain
 
 Now that we have a static IP and setup our DNS correctly we can add this machine to the domain.
 
