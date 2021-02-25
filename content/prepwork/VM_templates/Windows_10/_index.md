@@ -227,6 +227,17 @@ When the machine has fully powered off click on the VM and open `Settings`. Now 
 
 ![](remove_virtbox_iso.gif.gif)
 
+## Sysprep
+
+Turn on the machine once again (last time I promise) and click on start. Click on start and search for CMD and press enter. Now type the following in the Command Prompt:
+
+- `cd C:\Windows\System32\Sysprep`
+- `sysprep.exe /oobe /generalize /shutdown`
+
+![](sysprep.gif)
+
+This program resets windows to a 'Out-of-box-experience'. This will ensure no issues will pop up when joining (multiple copies of this machine) to a Active Directory Domain. This sysprep process might take a while.
+
 ## Create Snapshot
 
 Since we now have a VM in a nice clean and prepared state we want to create a snapshot of it. A snapshot is basically a copy of your VM at a given point in time. This snapshot will allow us to create `Linked clone` which will save us time and disk space.
