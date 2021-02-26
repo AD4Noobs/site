@@ -1,7 +1,7 @@
 ---
 title: "Configure a basic file share"
 date: 2021-02-25T14:35:45+01:00
-draft: false
+draft: true
 pre: "<b>5.3 </b>"
 ---
 
